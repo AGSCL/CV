@@ -1,0 +1,113 @@
+---
+name: Andrés
+surname: González Santa Cruz
+position: "Docente y Asistente de Investigación"
+address: "Santiago de Chile"
+profilepic: "CURSO-COMPUTACION-ALONSO.jpg"
+email: "gonzalez.santacruz.andres@gmail.com"
+github: AGSCL
+linkedin: andrés-gonzález-santa-cruz
+orcid: 0000-0002-5166-9121
+date: "`r readr::parse_date(format(Sys.time(), '%d %B %Y'),'%d %B %Y',locale=readr::locale('en'))`"
+headcolor: 2f40d8
+aboutme: "He trabajado como asistente de investigación aplicando técnicas de análisis de datos. Mis áreas de interés son el estudio de políticas públicas sobre tratamiento de drogas, factores de riesgo psicosociales y metodologías de investigación cuantitativas. Este currículo fue compilado en código."
+docname: CV
+output:   vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+require(xfun)
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+            )
+xfun::pkg_attach2(packages, message = FALSE)
+source(file = here("data.r"))
+```
+
+# Experiencia laboral
+
+```{r EMPLOYMENT}
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+```
+
+\pagebreak
+
+# Otros Proyectos
+
+```{r PROJECTS}
+projects %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+```
+
+# Otras actividades científicas
+
+## Publicaciones
+
+```{r pubs}
+pubs %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+```
+
+\pagebreak
+
+## Seminarios/ Congresos
+
+```{r sem}
+sem %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+```
+
+# Estudios formales de interés
+
+```{r EDUCATION}
+edu %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = where
+  )
+```
+
+# Habilidades
+
+```{r SKILLS}
+skills %>%
+  detailed_entries(
+    with = area,
+    what = skills
+  )
+```
