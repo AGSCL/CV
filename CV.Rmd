@@ -1,7 +1,7 @@
 ---
 name: Andrés
 surname: González Santa Cruz
-position: "Docente y Asistente de Investigación"
+position: "Asistente de Investigación y Estudiante Doctorado en Salud Pública UCH"
 address: "Santiago de Chile"
 profilepic: "CURSO-COMPUTACION-ALONSO.jpg"
 email: "gonzalez.santacruz.andres@gmail.com"
@@ -43,7 +43,7 @@ skills <- dplyr::tribble(
   "Control de versiones", "Git",
   "Editores de texto", "RStudio, Visual Studio, Visual Studio Code",
   "Microsoft Office", "Excel, Outlook, OneNote, PowerBI, PowerPoint, Word",
-  "Inglés", "Manejo escrito y oral (ETAAPP 89%, Level 6: Advance Step One)"
+  "Inglés", "Manejo escrito y oral (ETAAPP 89%, Level 6: Advance Step One; Duolingo English Test: 130 de 160)",
 )
 
 honors <- dplyr::tribble(
@@ -73,6 +73,7 @@ sem <- dplyr::tribble(
 
 edu <- dplyr::tribble(
   ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
+  "Doctorado en Salud Pública", 2022, NA, "Universidad de Chile", "Santiago, Chile", NA,
   "Diplomado en Bioestadística Avanzada", 2021, 2021, "Universidad Católica", "Online",NA,
   "Magíster en Métodos para la Investigación Social", 2018, 2019, "Universidad Diego Portales", "Santiago, Chile",NA,
   "Diplomado en Métodos Cuentitativos para la Investigación Social", 2017, 2017, "Universidad Diego Portales", "Santiago, Chile",NA,
