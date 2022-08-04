@@ -52,7 +52,8 @@ honors <- dplyr::tribble(
 )
 
 pubs <- dplyr::tribble(
-  ~area, ~accomplishment, ~detail, ~year, ~where, 
+  ~area, ~accomplishment, ~detail, ~year, ~where,
+  NA, NA, "González-Santa Cruz A., Ansoleaga E., Validación de la Escala de Liderazgo Destructivo y del Cuestionario de Conductas Negativas-Revisado en Chile, Psykhe, (en prensa)", 2022, NA,
   NA, NA, "Tapia-Munoz T., González-Santa Cruz A., Clarke H., Morris W., Palmeiro Silva Y., Allel K., COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, DOI/URL: 10.1080/20477724.2021.2007336", 2021, NA,
   NA, NA, "Olivari C. F., González-Santa Cruz A., Mauro P. M., Martins S. S., Sapag J., Gaete J., Cerdá M., Castillo-Carniglia A., Treatment outcome and readmission risk among women in women-only versus mixed-gender drug treatment programs in Chile, Journal of Substance Abuse Treatment, 108616, DOI/URL: 10.1016/j.jsat.2021.108616", 2021, NA,
   NA, NA, "Gajardo A. I. J., Wagner T. D., Howell K., González-Santa Cruz A., Kaufman J. S., Castillo-Carniglia A., Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, The Lancet Regional Health Americas, 100082, DOI/URL: 10.1016/j.lana.2021.100082", 2021, NA,
@@ -82,7 +83,8 @@ edu <- dplyr::tribble(
 
 work <- dplyr::tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-  "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (MEAD), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Presente", NA,"Santiago, Chile", "",
+  "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (nDP), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Presente", NA,"Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto",
+  "Ayudantía", "Magíster en Métodos de Investigación Social, Universidad Diego Portales", "Abril", 2021, "Mayo", 2022, "Santiago, Chile", "Estadística Aplicada y Procesamiento de Datos con R",
   "Docencia", "Carrera Data Science, Universidad Mayor", "Agosto", 2021, "Enero", 2022, "Santiago, Chile", "Métodos Cuantitativos de Investigación para alumnos de cuarto semestre",
   "Asistente de Investigación", "Proyecto Fondecyt 1191282, a cargo de Álvaro Castillo-Carniglia", "Marzo", 2019, "Marzo", 2022, "Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto; Impartir taller Introductorio de Manejos de Datos del Doctorado en Políticas Públicas de la Universidad Mayor.",
   "Asistente de Investigación", "Proyecto Fondecyt 1170239, a cargo de Elisa Ansoleaga Moreno", "Marzo", 2019, "Marzo", 2020, "Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores; Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto.",
@@ -135,11 +137,11 @@ projects %>%
 ```{r pubs}
 pubs %>%
   detailed_entries(
-    with = area,
-    what = accomplishment,
+    #with = area,
+    #what = accomplishment,
     why = detail,
-    when = year,
-    where = where
+    when = year
+    #where = where
   )
 ```
 
@@ -150,8 +152,8 @@ pubs %>%
 ```{r sem}
 sem %>%
   detailed_entries(
-    with = area,
-    what = accomplishment,
+    #with = area,
+    #what = accomplishment,
     why = detail,
     when = year,
     where = where
@@ -165,7 +167,7 @@ edu %>%
   detailed_entries(
     with = inst,
     what = degree,
-    why = detail,
+    #why = detail,
     when = glue::glue("{startYear} --> {endYear}",.na = ""),
     where = where
   )
