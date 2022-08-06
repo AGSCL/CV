@@ -37,12 +37,9 @@ options(encoding = "UTF-8")
 
 skills <- dplyr::tribble(
   ~area, ~skills,
-  "Lenguajes de programación", "JavaScript (Básico), R (Intermedio-Avanzado), VBA (Básico)",
-  "Lenguajes Markup", "CSS, HTML, LaTeX, Markdown, RMarkdown",
-  "Otros lenguajes", "YAML",
-  "Control de versiones", "Git",
-  "Editores de texto", "RStudio, Visual Studio, Visual Studio Code",
-  "Microsoft Office", "Excel, Outlook, OneNote, PowerBI, PowerPoint, Word",
+  "Lenguajes de programación", "JavaScript (Básico), R (Intermedio-Avanzado), VBA (Básico), Python (Básico)",
+  "Otros lenguajes", "CSS, HTML, LaTeX, RMarkdown, YAML, Git",
+  "Ofimáticos", "Excel, Outlook, OneNote, PowerBI, PowerPoint, Word, Google Docs, Google Spreadsheet",
   "Inglés", "Manejo escrito y oral (ETAAPP 89%, Level 6: Advance Step One; Duolingo English Test: 130 de 160)",
 )
 
@@ -130,7 +127,7 @@ projects %>%
   )
 ```
 
-# Otras actividades científicas
+# Actividades de investigación
 
 ## Publicaciones
 
@@ -144,12 +141,12 @@ pubs %>%
     #where = where
   )
 ```
-
 \pagebreak
 
 ## Seminarios/ Congresos
 
 ```{r sem}
+#\pagebreak
 sem %>%
   detailed_entries(
     #with = area,
@@ -160,6 +157,12 @@ sem %>%
   )
 ```
 
+<br>
+
+## Revisor de artículos en revistas científicas
+
+American Journal of Preventive Medicine,  International Journal of Workplace Health Management, Psicoperspectivas, Revista Universidad y Salud, Quaderns de Psicologia, Medwave.
+
 # Estudios formales de interés
 
 ```{r EDUCATION}
@@ -168,7 +171,7 @@ edu %>%
     with = inst,
     what = degree,
     #why = detail,
-    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    when = ifelse(is.na(endYear),glue::glue("{startYear} --> Presente",.na = ""),glue::glue("{startYear} --> {endYear}",.na = "")),
     where = where
   )
 ```
