@@ -46,17 +46,19 @@ skills <- dplyr::tribble(
 honors <- dplyr::tribble(
   ~area, ~accomplishment, ~year, ~where, ~detail,
   "Facultad de Psicología", "Aprobado con distinción máxima", 2014, "Universidad Diego Portales",NA,
+  "Facultad de Ciencias Sociales e Historia", "Aprobado con distinción máxima", 2019, "Universidad Diego Portales",NA,
 )
 
 pubs <- dplyr::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where,
-  NA, NA, "González-Santa Cruz A., Ansoleaga E., Validación de la Escala de Liderazgo Destructivo y del Cuestionario de Conductas Negativas-Revisado en Chile, Psykhe, (en prensa)", 2022, NA,
-  NA, NA, "Tapia-Munoz T., González-Santa Cruz A., Clarke H., Morris W., Palmeiro Silva Y., Allel K., COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, DOI/URL: 10.1080/20477724.2021.2007336", 2021, NA,
-  NA, NA, "Olivari C. F., González-Santa Cruz A., Mauro P. M., Martins S. S., Sapag J., Gaete J., Cerdá M., Castillo-Carniglia A., Treatment outcome and readmission risk among women in women-only versus mixed-gender drug treatment programs in Chile, Journal of Substance Abuse Treatment, 108616, DOI/URL: 10.1016/j.jsat.2021.108616", 2021, NA,
-  NA, NA, "Gajardo A. I. J., Wagner T. D., Howell K., González-Santa Cruz A., Kaufman J. S., Castillo-Carniglia A., Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, The Lancet Regional Health Americas, 100082, DOI/URL: 10.1016/j.lana.2021.100082", 2021, NA,
-  NA, NA, "González-Santa Cruz A., Toro Cifuentes J. P., Culturas organizacionales y factores de riesgo psicosociales en organizaciones chilenas Un analisis de clases latentes, Psicoperspectivas, 20, 1, DOI/URL: 10.5027/psicoperspectivas-Vol20-Issue1-fulltext-2006", 2021, NA,
-  NA, NA, "Castillo -Carniglia A., González-Santa Cruz A., Cerdá M., Delcher C., Shev A., Wintemute G. J. , Henry S. G., Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, Drug and alcohol dependence, 1, 221, 1-7, DOI/URL: 10.1016/j.drugalcdep.2020.108405", 2020, NA,
-  NA, NA, "Ansoleaga E., Ahumada M., González-Santa Cruz A., Association of Workplace Bullying and Workplace Vulnerability in the Psychological Distress of Chilean Workers, International journal of environmental research and public health, 16, 20, 1-14, DOI/URL: 10.3390/ijerph16204039", 2019, NA
+  NA, NA, "Mateo-Pinones, M., González-Santa Cruz, A., Portilla-Huidobro, R., Castillo-Carniglia, A., Evidence-based policymaking: Lessons from the Chilean Substance Use Treatment Policy, International Journal of Drug Policy, DOI: 10.1016/j.drugpo.2022.103860", 2022, NA,
+  NA, NA, "González-Santa Cruz A., Ansoleaga E., Validación de la Escala de Liderazgo Destructivo y del Cuestionario de Conductas Negativas-Revisado en Chile, Psykhe, (Aceptado)", 2022, NA,
+  NA, NA, "Tapia-Munoz T., González-Santa Cruz A., Clarke H., Morris W., Palmeiro Silva Y., Allel K., COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, DOI: 10.1080/20477724.2021.2007336", 2021, NA,
+  NA, NA, "Olivari C. F., González-Santa Cruz A., Mauro P. M., Martins S. S., Sapag J., Gaete J., Cerdá M., Castillo-Carniglia A., Treatment outcome and readmission risk among women in women-only versus mixed-gender drug treatment programs in Chile, Journal of Substance Abuse Treatment, 108616, DOI: 10.1016/j.jsat.2021.108616", 2021, NA,
+  NA, NA, "Gajardo A. I. J., Wagner T. D., Howell K., González-Santa Cruz A., Kaufman J. S., Castillo-Carniglia A., Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, The Lancet Regional Health Americas, 100082, DOI: 10.1016/j.lana.2021.100082", 2021, NA,
+  NA, NA, "González-Santa Cruz A., Toro Cifuentes J. P., Culturas organizacionales y factores de riesgo psicosociales en organizaciones chilenas Un analisis de clases latentes, Psicoperspectivas, 20, 1, DOI: 10.5027/psicoperspectivas-Vol20-Issue1-fulltext-2006", 2021, NA,
+  NA, NA, "Castillo -Carniglia A., González-Santa Cruz A., Cerdá M., Delcher C., Shev A., Wintemute G. J. , Henry S. G., Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, Drug and alcohol dependence, 1, 221, 1-7, DOI: 10.1016/j.drugalcdep.2020.108405", 2020, NA,
+  NA, NA, "Ansoleaga E., Ahumada M., González-Santa Cruz A., Association of Workplace Bullying and Workplace Vulnerability in the Psychological Distress of Chilean Workers, International journal of environmental research and public health, 16, 20, 1-14, DOI: 10.3390/ijerph16204039", 2019, NA
 )
 
 sem <- dplyr::tribble(
@@ -72,7 +74,7 @@ sem <- dplyr::tribble(
 edu <- dplyr::tribble(
   ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
   "Doctorado en Salud Pública", 2022, NA, "Universidad de Chile", "Santiago, Chile", NA,
-  "Diplomado en Bioestadística Avanzada", 2021, 2021, "Universidad Católica", "Online",NA,
+  "Diplomado en Bioestadística Avanzada", 2021, 2021, "Universidad Católica", "En-línea",NA,
   "Magíster en Métodos para la Investigación Social", 2018, 2019, "Universidad Diego Portales", "Santiago, Chile",NA,
   "Diplomado en Métodos Cuentitativos para la Investigación Social", 2017, 2017, "Universidad Diego Portales", "Santiago, Chile",NA,
   "Título profesional de Psicólogo", 2009, 2014, "Universidad Diego Portales", "Santiago, Chile",NA,
@@ -80,9 +82,9 @@ edu <- dplyr::tribble(
 
 work <- dplyr::tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-    "Ayudantía", "Magíster en Métodos de Investigación Social, Universidad Diego Portales", "Septiembre", 2022, "Octubre", 2022, "Santiago, Chile", "Medición y análisis dimensional de datos",
   "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (nDP), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Presente", NA,"Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto",
-  "Ayudantía", "Magíster en Métodos de Investigación Social, Universidad Diego Portales", "Abril", 2022, "Mayo", 2022, "Santiago, Chile", "Estadística Aplicada y Procesamiento de Datos con R",
+  "Profesor", "Magíster en Métodos de Investigación Social, Universidad Diego Portales","Noviembre",2022,"Noviembre", 2022, "Santiago, Chile", "Taller de Profundización en R",
+  "Ayudantía", "Magíster en Métodos de Investigación Social, Universidad Diego Portales", "Abril", 2022, "Diciembre", 2022, "Santiago, Chile", "Estadística Aplicada y Procesamiento de Datos con R & Medición y análisis dimensional de datos",
   "Docencia", "Carrera Data Science, Universidad Mayor", "Agosto", 2021, "Enero", 2022, "Santiago, Chile", "Métodos Cuantitativos de Investigación para alumnos de cuarto semestre",
   "Asistente de Investigación", "Proyecto Fondecyt 1191282, a cargo de Álvaro Castillo-Carniglia", "Marzo", 2019, "Marzo", 2022, "Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto; Impartir taller Introductorio de Manejos de Datos del Doctorado en Políticas Públicas de la Universidad Mayor.",
   "Asistente de Investigación", "Proyecto Fondecyt 1170239, a cargo de Elisa Ansoleaga Moreno", "Marzo", 2019, "Marzo", 2020, "Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores; Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto.",
