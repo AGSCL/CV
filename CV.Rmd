@@ -51,6 +51,8 @@ honors <- dplyr::tribble(
 
 pubs <- dplyr::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where,
+  NA, NA, "Lagos-Barrios, R., Flores-Alvarado, S., González-Santa Cruz, A., Medina-Marín, F., Ciencia de Datos para la Salud Pública: Una conversación necesaria, Inferencias−Boletín de Bioestadística, 7, 6-10.  https://revistasdex.uchile.cl/index.php/int/article/view/12665/12685", 2023, NA,
+  NA, NA, "Ruiz-Tagle, J., González-Santa Cruz, A., Rocha-Jiménez, T., Castillo-Carniglia, A., Does substance use disorder treatment completion reduce the risk of treatment readmission in Chile? Drug and Alcohol Dependence, 248, 109907. DOI: 10.1016/j.drugalcdep.2023.109907", 2023, NA,
   NA, NA, "Mateo-Pinones, M., González-Santa Cruz, A., Portilla-Huidobro, R., Castillo-Carniglia, A., Evidence-based policymaking: Lessons from the Chilean Substance Use Treatment Policy, International Journal of Drug Policy, DOI: 10.1016/j.drugpo.2022.103860", 2022, NA,
   NA, NA, "González-Santa Cruz A., Ansoleaga E., Validación de la Escala de Liderazgo Destructivo y del Cuestionario de Conductas Negativas-Revisado en Chile, Psykhe, (Aceptado)", 2022, NA,
   NA, NA, "Tapia-Munoz T., González-Santa Cruz A., Clarke H., Morris W., Palmeiro Silva Y., Allel K., COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, DOI: 10.1080/20477724.2021.2007336", 2021, NA,
@@ -63,6 +65,7 @@ pubs <- dplyr::tribble(
 
 sem <- dplyr::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where, 
+  NA, NA, "González-Santa Cruz A., Castellano J., ask development, living conditions and time to drop-out in patients of 18-29 years of age, under treatment for substance abuse disorders in Chile, 2010-2019, 2023 NIDA International Forum, US (virtual)", 2023, "Poster",
   NA, NA, "González-Santa Cruz A., Castillo Carniglia A., Ambulatory or residential? a multi-state analysis of treatments for substance use disorders, Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online por COVID-19)", 2021, "Poster",
   NA, NA, "Olivari C. F., González-Santa Cruz A., Castillo Carniglia A., Treatment outcome and readmission risk among women in women only versus mixed gender drug treatment programs in Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online por COVID-19)", 2021, "Poster",
     NA, NA, "Castillo-Carniglia A., Gajardo A. I. J., Wagner T. D., Howell K., González-Santa Cruz A., Kaufman J. S., Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, 54rd Annual Meeting of the Society of Epidemiologic Research, San Diego, US (online por COVID-19)", 2021, "Poster",
@@ -82,7 +85,7 @@ edu <- dplyr::tribble(
 
 work <- dplyr::tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-  "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (nDP), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Presente", NA,"Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto. Coinvestigador Proyecto Intramural 2022-23: Assessing the impact of substance use treatment for preventing criminal justice system contact in Chile",
+  "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (nDP), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Presente", NA,"Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto. Coinvestigador Proyecto Intramural 2022-23: Assessing the impact of substance use treatment for preventing criminal justice system contact in Chile; Investigador Principal, Proyecto Intramural 2022-23: Poly-substance use, treatment completion, and contact with the justice system: a multistate analysis of treatments for substance use disorders between 2010-2019 in Chile",
   "Profesor", "Magíster en Métodos de Investigación Social, Universidad Diego Portales","Noviembre",2022,"Noviembre", 2022, "Santiago, Chile", "Taller de Profundización en R",
   "Ayudantía", "Magíster en Métodos de Investigación Social, Universidad Diego Portales", "Abril", 2022, "Diciembre", 2022, "Santiago, Chile", "Estadística Aplicada y Procesamiento de Datos con R & Medición y análisis dimensional de datos",
   "Docencia", "Carrera Data Science, Universidad Mayor", "Agosto", 2021, "Enero", 2022, "Santiago, Chile", "Métodos Cuantitativos de Investigación para alumnos de cuarto semestre",
@@ -165,6 +168,11 @@ sem %>%
 ## Revisor de artículos en revistas científicas
 
 American Journal of Preventive Medicine,  International Journal of Workplace Health Management, Psicoperspectivas, Revista Universidad y Salud, Quaderns de Psicologia, Medwave, Addiction.
+
+## Otras afiliaciones
+Society for Epidemiologic Research: Clearfield, UT, US
+2023-
+Miembro
 
 # Estudios formales de interés
 
