@@ -49,10 +49,9 @@ honors <- dplyr::tribble(
   "Facultad de Ciencias Sociales e Historia", "Aprobado con distinción máxima", 2019, "Universidad Diego Portales",NA,
 )
 
-pubs <- dplyr::tribble(
+pubs <- dplyr::tribble(~area, ~accomplishment, ~detail, ~year, ~where,
   NA, NA, "Mateo-Pinones, M., González-Santa Cruz, A., Bond, C., McGee, T., Payne, J., & Castillo-Carniglia, Á. Substance use treatment completion and criminal justice system contact in Chile: A retrospective, linked data, cohort study. Addiction. 2024. https://doi.org/10.1111/add.16412", 2024, NA,
   NA, NA, "Bórquez I, Cerdá M, González-Santa Cruz A, Krawczyk N, Castillo-Carniglia Á. Longitudinal trajectories of substance use disorder treatment use: A latent class growth analysis using a national cohort in Chile. Addiction. 2024. https://doi.org/10.1111/add.16412", 2024, NA,
-  ~area, ~accomplishment, ~detail, ~year, ~where,
   NA, NA, "Lagos-Barrios, R., Flores-Alvarado, S., González-Santa Cruz, A., Medina-Marín, F., Ciencia de Datos para la Salud Pública: Una conversación necesaria, Inferencias−Boletín de Bioestadística, 7, 6-10.  https://revistasdex.uchile.cl/index.php/int/article/view/12665/12685", 2023, NA,
   NA, NA, "Ruiz-Tagle, J., González-Santa Cruz, A., Rocha-Jiménez, T., Castillo-Carniglia, A., Does substance use disorder treatment completion reduce the risk of treatment readmission in Chile? Drug and Alcohol Dependence, 248, 109907. DOI: 10.1016/j.drugalcdep.2023.109907", 2023, NA,
   NA, NA, "Mateo-Pinones, M., González-Santa Cruz, A., Portilla-Huidobro, R., Castillo-Carniglia, A., Evidence-based policymaking: Lessons from the Chilean Substance Use Treatment Policy, International Journal of Drug Policy, DOI: 10.1016/j.drugpo.2022.103860", 2022, NA,
