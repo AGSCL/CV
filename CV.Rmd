@@ -50,6 +50,8 @@ honors <- dplyr::tribble(
 )
 
 pubs <- dplyr::tribble(
+  NA, NA, "Mateo-Pinones, M., González-Santa Cruz, A., Bond, C., McGee, T., Payne, J., & Castillo-Carniglia, Á. Substance use treatment completion and criminal justice system contact in Chile: A retrospective, linked data, cohort study. Addiction. 2024. https://doi.org/10.1111/add.16412", 2024, NA,
+  NA, NA, "Bórquez I, Cerdá M, González-Santa Cruz A, Krawczyk N, Castillo-Carniglia Á. Longitudinal trajectories of substance use disorder treatment use: A latent class growth analysis using a national cohort in Chile. Addiction. 2024. https://doi.org/10.1111/add.16412", 2024, NA,
   ~area, ~accomplishment, ~detail, ~year, ~where,
   NA, NA, "Lagos-Barrios, R., Flores-Alvarado, S., González-Santa Cruz, A., Medina-Marín, F., Ciencia de Datos para la Salud Pública: Una conversación necesaria, Inferencias−Boletín de Bioestadística, 7, 6-10.  https://revistasdex.uchile.cl/index.php/int/article/view/12665/12685", 2023, NA,
   NA, NA, "Ruiz-Tagle, J., González-Santa Cruz, A., Rocha-Jiménez, T., Castillo-Carniglia, A., Does substance use disorder treatment completion reduce the risk of treatment readmission in Chile? Drug and Alcohol Dependence, 248, 109907. DOI: 10.1016/j.drugalcdep.2023.109907", 2023, NA,
