@@ -54,21 +54,25 @@ skills <- dplyr::tribble(
 
 pubs <- tibble::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where,
-  NA, NA, "Dinamarca-Aravena KA, Rocha-Jiménez T, Morales-Miranda S, Castillo-Carniglia Á, González-Santa Cruz A, Respondent Driving Sampling online (Web RDS) as a strategy to access hard-to-reach but non-hidden populations: the case of health professionals working in Chilean schools. Journal of Social Research Methodology (Manuscrito enviado)", 2024, NA,
-  NA, NA, "Castellano J, González-Santa Cruz A, Castillo-Carniglia Á, Gaete J, Association between living arrangements and time to drop out in patients between 18 and 29 years of age, under treatment for substance abuse disorders in Chile, 2010-2019. Pre-print. 10.21203/rs.3.rs-4276312/v1", 2024, NA,
-  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Otra lección de la pandemia: relevancia del apoyo social para la protección de la salud mental en trabajadores de la salud. Revista Médica de Chile (Manuscrito enviado)",2024, NA,
-  NA, NA, "Saldías Fernández MA, Gónzalez-Santa-Cruz A, Martínez-Ordenes M, Parra-Giordano D, Factores sociodemográficos-sanitarios sobre la decisión de interrupción del embarazo, Chile: un análisis de clases latentes. Global health promotion. (Aceptado)", 2024, NA,
-  NA, NA, "Mateo-Pinones M, González-Santa Cruz A, Bond C, McGee T, Payne J, & Castillo-Carniglia Á, Substance use treatment completion and criminal justice system contact in Chile: A retrospective, linked data, cohort study. Addiction. 10.1111/add.16488", 2024, NA,
-  NA, NA, "Bórquez I, Cerdá M, González-Santa Cruz A, Krawczyk N, Castillo-Carniglia Á, Longitudinal trajectories of substance use disorder treatment use: A latent class growth analysis using a national cohort in Chile. Addiction, 119(4), 10.1111/add.16412", 2024, NA,
-  NA, NA, "Saldias-Fernández MA, Gónzalez-Santa-Cruz A, Parra-Giordano D, Interrupción del embarazo en Chile 2018-2020: rol de las variables sociodemográficas y sanitarias sobre la decisión de la mujer. Salud Publica Mex [Internet]. 10.21203/rs.3.rs-4276312/v1", 2024, NA,
-  NA, NA, "Castillo-Carniglia A, González-Santa Cruz A, Mauro PM, Sapag J, Martins SS, Ruiz-Tagle J, Gaete J, Cerdá M, Effect of residential versus ambulatory substance use disorders treatment on readmission risk in a register-based national retrospective cohort. Social Psychiatry and Psychiatric Epidemiology (Manuscrito enviado)", 2023, NA,
-  NA, NA, "Lagos-Barrios R, González-Santa Cruz A, Medina-Marín F, Flores-Alvarado S, Aguero-Jiménez A, Ciencia de Datos para la Salud Pública: Apuntes de una conversación en desarrollo, Inferencias−Boletín de Bioestadística, 8, https://revistasdex.uchile.cl/index.php/int/article/view/12844/12864", 2023, NA,
-  NA, NA, "Lagos-Barrios R, Flores-Alvarado S, González-Santa Cruz A, Medina-Marín F, Ciencia de Datos para la Salud Pública: Una conversación necesaria, Inferencias−Boletín de Bioestadística, 7, https://revistasdex.uchile.cl/index.php/int/article/view/12665/12685", 2023, NA,
-  NA, NA, "Ruiz-Tagle J, González-Santa Cruz, A, Rocha-Jiménez, T, Castillo-Carniglia, A, Does substance use disorder treatment completion reduce the risk of treatment readmission in Chile? Drug and Alcohol Dependence, 248, 109907. 10.1016/j.drugalcdep.2023.109907", 2023, NA,
-  NA, NA, "Mateo-Pinones, M, González-Santa Cruz, A, Portilla-Huidobro, R, Castillo-Carniglia, A, Evidence-based policymaking: Lessons from the Chilean Substance Use Treatment Policy, International Journal of Drug Policy, 109, 103860. 10.1016/j.drugpo.2022.103860", 2022, NA,
-  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Validación de la Escala de Liderazgo Destructivo y del Cuestionario de Conductas Negativas-Revisado en Chile, Psykhe, 32(2), 10.7764/psykhe.2020.27999.", 2022, NA,
-  NA, NA, "Tapia-Munoz T, González-Santa Cruz A, Clarke H, Morris W, Palmeiro Silva Y, Allel K, COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, 10.1080/20477724.2021.2007336", 2021, NA,
-  NA, NA, "Olivari CF, González-Santa Cruz A, Mauro PM, Martins SS, Sapag J, Gaete J, Cerdá M, Castillo-Carniglia A, Treatment outcome and readmission risk among women in women-only versus mixed-gender drug treatment programs in Chile, Journal of Substance Abuse Treatment, 108616, 10.1016/j.jsat.2021.108616", 2021, NA
+  NA, NA, "Dinamarca-Aravena KA, Rocha-Jiménez T, Morales-Miranda S, Castillo-Carniglia Á, González-Santa Cruz A, Respondent Driving Sampling online (Web RDS) as a strategy to access hard-to-reach but non-hidden populations: the case of health professionals working in Chilean schools. Journal of Social Research Methodology (Manuscrito enviado)", "2024", NA,
+  NA, NA, "Castellano J, González-Santa Cruz A, Castillo-Carniglia Á, Gaete J, Association between living arrangements and time to drop out in patients between 18 and 29 years of age, under treatment for substance abuse disorders in Chile, 2010-2019. Pre-print. 10.21203/rs.3.rs-4276312/v1", "2024", NA,
+  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Otra lección de la pandemia: relevancia del apoyo social para la protección de la salud mental en trabajadores de la salud. Revista Médica de Chile (Manuscrito enviado)","2024", NA,
+  NA, NA, "Saldías Fernández MA, Gónzalez-Santa-Cruz A, Martínez-Ordenes M, Parra-Giordano D, Factores sociodemográficos-sanitarios sobre la decisión de interrupción del embarazo, Chile: un análisis de clases latentes. Global health promotion. (Aceptado)", "2024", NA,
+  NA, NA, "Mateo-Pinones M, González-Santa Cruz A, Bond C, McGee T, Payne J, & Castillo-Carniglia Á, Substance use treatment completion and criminal justice system contact in Chile: A retrospective, linked data, cohort study. Addiction. 10.1111/add.16488", "2024", NA,
+  NA, NA, "Bórquez I, Cerdá M, González-Santa Cruz A, Krawczyk N, Castillo-Carniglia Á, Longitudinal trajectories of substance use disorder treatment use: A latent class growth analysis using a national cohort in Chile. Addiction, 119(4), 10.1111/add.16412", "2024", NA,
+  NA, NA, "Saldias-Fernández MA, Gónzalez-Santa-Cruz A, Parra-Giordano D, Interrupción del embarazo en Chile 2018-2020: rol de las variables sociodemográficas y sanitarias sobre la decisión de la mujer. Salud Publica Mex [Internet]. 10.21203/rs.3.rs-4276312/v1", "2024", NA,
+  NA, NA, "Castillo-Carniglia A, González-Santa Cruz A, Mauro PM, Sapag J, Martins SS, Ruiz-Tagle J, Gaete J, Cerdá M, Effect of residential versus ambulatory substance use disorders treatment on readmission risk in a register-based national retrospective cohort. Social Psychiatry and Psychiatric Epidemiology (Manuscrito enviado)", "2023", NA,
+  NA, NA, "Lagos-Barrios R, González-Santa Cruz A, Medina-Marín F, Flores-Alvarado S, Aguero-Jiménez A, Ciencia de Datos para la Salud Pública: Apuntes de una conversación en desarrollo, Inferencias−Boletín de Bioestadística, 8, https://revistasdex.uchile.cl/index.php/int/article/view/12844/12864", "2023", NA,
+  NA, NA, "Lagos-Barrios R, Flores-Alvarado S, González-Santa Cruz A, Medina-Marín F, Ciencia de Datos para la Salud Pública: Una conversación necesaria, Inferencias−Boletín de Bioestadística, 7, https://revistasdex.uchile.cl/index.php/int/article/view/12665/12685", "2023", NA,
+  NA, NA, "Ruiz-Tagle J, González-Santa Cruz, A, Rocha-Jiménez, T, Castillo-Carniglia, A, Does substance use disorder treatment completion reduce the risk of treatment readmission in Chile? Drug and Alcohol Dependence, 248, 109907. 10.1016/j.drugalcdep.2023.109907", "2023", NA,
+  NA, NA, "Mateo-Pinones, M, González-Santa Cruz, A, Portilla-Huidobro, R, Castillo-Carniglia, A, Evidence-based policymaking: Lessons from the Chilean Substance Use Treatment Policy, International Journal of Drug Policy, 109, 103860. 10.1016/j.drugpo.2022.103860", "2019-2022", NA,
+  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Validación de la Escala de Liderazgo Destructivo y del Cuestionario de Conductas Negativas-Revisado en Chile, Psykhe, 32(2), 10.7764/psykhe.2020.27999.", "2019-2022", NA,
+  NA, NA, "Tapia-Munoz T, González-Santa Cruz A, Clarke H, Morris W, Palmeiro Silva Y, Allel K, COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, 10.1080/20477724.2021.2007336", "2019-2022", NA,
+  NA, NA, "Olivari CF, González-Santa Cruz A, Mauro PM, Martins SS, Sapag J, Gaete J, Cerdá M, Castillo-Carniglia A, Treatment outcome and readmission risk among women in women-only versus mixed-gender drug treatment programs in Chile, Journal of Substance Abuse Treatment, 108616, 10.1016/j.jsat.2021.108616", "2019-2022", NA,
+  NA, NA, "Gajardo AIJ, Wagner TD, Howell K, González-Santa Cruz A, Kaufman JS, Castillo-Carniglia A, Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, The Lancet Regional Health Americas, 100082, 10.1016/j.lana.2021.100082", "2019-2022", NA,
+  NA, NA, "González-Santa Cruz A, Toro Cifuentes JP, Culturas organizacionales y factores de riesgo psicosociales en organizaciones chilenas Un analisis de clases latentes, Psicoperspectivas, 20, 1, 10.5027/psicoperspectivas-Vol20-Issue1-fulltext-2006", "2019-2022", NA,
+  NA, NA, "Castillo-Carniglia A, González-Santa Cruz A, Cerdá M, Delcher C, Shev A, Wintemute GJ, Henry SG, Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, Drug and alcohol dependence, 1, 221, /j.drugalcdep.2020.108405", "2019-2021", NA,
+  NA, NA, "Ansoleaga E, Ahumada M, González-Santa Cruz A, Association of Workplace Bullying and Workplace Vulnerability in the Psychological Distress of Chilean Workers, International journal of environmental research and public health, 16, 20, 1-14, DOI: 10.3390/ijerph16204039", "2019-2021", NA
 )
 
 sem <- dplyr::tribble(
@@ -141,9 +145,8 @@ projects %>%
     where = where
   )
 ```
-
+\pagebreak
 # Actividades de investigación
-
 ## Publicaciones
 \fontsize{10pt}{1.5em}\color{text}
 ```{r pubs}

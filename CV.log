@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.17)  17 MAY 2024 14:21
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.17)  17 MAY 2024 19:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -802,28 +802,29 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <8> not availa
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on input line 125.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
 (Font)              scaled to size 8.0pt on input line 125.
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 167.
-LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 167.
+LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 162.
+[1
 
-Underfull \hbox (badness 1009) in paragraph at lines 193--193
+]
+LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 168.
+LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 168.
+
+Underfull \hbox (badness 1009) in paragraph at lines 194--194
 []\TU/SourceSansPro(2)/m/n/9 Olivari CF, González-Santa Cruz A, Mauro PM, Martins SS, Sapag J, Gaete J, Cerdá M, Castillo-Carniglia A, Treatment outcome and readmis-
  []
 
-LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 194.
-[1
-
-] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 241--242
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 246--247
 
  []
 
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 249.
+(Font)              scaled to size 9.0pt on input line 254.
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
@@ -835,12 +836,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.266 
+l.271 
        
 Here is how much of TeX's memory you used:
  32939 strings out of 476705
  676071 string characters out of 5799573
- 1968406 words of memory out of 5000000
+ 1957406 words of memory out of 5000000
  54475 multiletter control sequences out of 15000+600000
  563002 words of font info for 134 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
