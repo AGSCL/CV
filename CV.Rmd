@@ -11,10 +11,19 @@ orcid: 0000-0002-5166-9121
 date: "`r readr::parse_date(format(Sys.time(), '%d %B %Y'),'%d %B %Y',locale=readr::locale('en'))`"
 headcolor: 2f40d8
 aboutme: "He trabajado como asistente de investigación aplicando técnicas de análisis de datos. Mis áreas de interés son el estudio de políticas públicas sobre tratamiento de drogas, factores de riesgo psicosociales y metodologías de investigación cuantitativas. Este currículo fue compilado en código."
-docname: CV
+docname: CV proveniente de \href{hhttps://github.com/AGSCL/CV}{https://github.com/AGSCL/CV}
 output:   
   vitae::awesomecv:
-    latex_engine: xelatex
+    pandoc_args: ["--lua-filter=lua/strong.lua"] 
+    keep_tex: false
+    latex_engine: xelatex    
+header-includes:
+- \geometry{left=1cm, top=1cm, right=1cm, bottom=1cm, footskip=0.5cm}
+# - \let\headerfont\rmfamily
+# - \let\headerfontlight\rmfamily
+# - \let\footerfont\rmfamily
+# - \let\bodyfont\rmfamily
+# - \let\bodyfontlight\rmfamily
 ---
 
 ```{r setup, include=FALSE}
@@ -43,35 +52,38 @@ skills <- dplyr::tribble(
   "Inglés", "Manejo escrito y oral (ETAAPP 89%, Level 6: Advance Step One; Duolingo English Test: 130 de 160)",
 )
 
-honors <- dplyr::tribble(
-  ~area, ~accomplishment, ~year, ~where, ~detail,
-  "Facultad de Psicología", "Aprobado con distinción máxima", 2014, "Universidad Diego Portales",NA,
-  "Facultad de Ciencias Sociales e Historia", "Aprobado con distinción máxima", 2019, "Universidad Diego Portales",NA,
-)
-
-pubs <- dplyr::tribble(
+pubs <- tibble::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where,
-  NA, NA, "Lagos-Barrios, R., Flores-Alvarado, S., González-Santa Cruz, A., Medina-Marín, F., Ciencia de Datos para la Salud Pública: Una conversación necesaria, Inferencias−Boletín de Bioestadística, 7, 6-10.  https://revistasdex.uchile.cl/index.php/int/article/view/12665/12685", 2023, NA,
-  NA, NA, "Ruiz-Tagle, J., González-Santa Cruz, A., Rocha-Jiménez, T., Castillo-Carniglia, A., Does substance use disorder treatment completion reduce the risk of treatment readmission in Chile? Drug and Alcohol Dependence, 248, 109907. DOI: 10.1016/j.drugalcdep.2023.109907", 2023, NA,
-  NA, NA, "Mateo-Pinones, M., González-Santa Cruz, A., Portilla-Huidobro, R., Castillo-Carniglia, A., Evidence-based policymaking: Lessons from the Chilean Substance Use Treatment Policy, International Journal of Drug Policy, DOI: 10.1016/j.drugpo.2022.103860", 2022, NA,
-  NA, NA, "González-Santa Cruz A., Ansoleaga E., Validación de la Escala de Liderazgo Destructivo y del Cuestionario de Conductas Negativas-Revisado en Chile, Psykhe, (Aceptado)", 2022, NA,
-  NA, NA, "Tapia-Munoz T., González-Santa Cruz A., Clarke H., Morris W., Palmeiro Silva Y., Allel K., COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, DOI: 10.1080/20477724.2021.2007336", 2021, NA,
-  NA, NA, "Olivari C. F., González-Santa Cruz A., Mauro P. M., Martins S. S., Sapag J., Gaete J., Cerdá M., Castillo-Carniglia A., Treatment outcome and readmission risk among women in women-only versus mixed-gender drug treatment programs in Chile, Journal of Substance Abuse Treatment, 108616, DOI: 10.1016/j.jsat.2021.108616", 2021, NA,
-  NA, NA, "Gajardo A. I. J., Wagner T. D., Howell K., González-Santa Cruz A., Kaufman J. S., Castillo-Carniglia A., Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, The Lancet Regional Health Americas, 100082, DOI: 10.1016/j.lana.2021.100082", 2021, NA,
-  NA, NA, "González-Santa Cruz A., Toro Cifuentes J. P., Culturas organizacionales y factores de riesgo psicosociales en organizaciones chilenas Un analisis de clases latentes, Psicoperspectivas, 20, 1, DOI: 10.5027/psicoperspectivas-Vol20-Issue1-fulltext-2006", 2021, NA,
-  NA, NA, "Castillo -Carniglia A., González-Santa Cruz A., Cerdá M., Delcher C., Shev A., Wintemute G. J. , Henry S. G., Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, Drug and alcohol dependence, 1, 221, 1-7, DOI: 10.1016/j.drugalcdep.2020.108405", 2020, NA,
-  NA, NA, "Ansoleaga E., Ahumada M., González-Santa Cruz A., Association of Workplace Bullying and Workplace Vulnerability in the Psychological Distress of Chilean Workers, International journal of environmental research and public health, 16, 20, 1-14, DOI: 10.3390/ijerph16204039", 2019, NA
+  NA, NA, "Dinamarca-Aravena KA, Rocha-Jiménez T, Morales-Miranda S, Castillo-Carniglia Á, González-Santa Cruz A, Respondent Driving Sampling online (Web RDS) as a strategy to access hard-to-reach but non-hidden populations: the case of health professionals working in Chilean schools. Journal of Social Research Methodology (Manuscrito enviado)", 2024, NA,
+  NA, NA, "Castellano J, González-Santa Cruz A, Castillo-Carniglia Á, Gaete J, Association between living arrangements and time to drop out in patients between 18 and 29 years of age, under treatment for substance abuse disorders in Chile, 2010-2019. Pre-print. 10.21203/rs.3.rs-4276312/v1", 2024, NA,
+  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Otra lección de la pandemia: relevancia del apoyo social para la protección de la salud mental en trabajadores de la salud. Revista Médica de Chile (Manuscrito enviado)",2024, NA,
+  NA, NA, "Saldías Fernández MA, Gónzalez-Santa-Cruz A, Martínez-Ordenes M, Parra-Giordano D, Factores sociodemográficos-sanitarios sobre la decisión de interrupción del embarazo, Chile: un análisis de clases latentes. Global health promotion. (Aceptado)", 2024, NA,
+  NA, NA, "Mateo-Pinones M, González-Santa Cruz A, Bond C, McGee T, Payne J, & Castillo-Carniglia Á, Substance use treatment completion and criminal justice system contact in Chile: A retrospective, linked data, cohort study. Addiction. 10.1111/add.16488", 2024, NA,
+  NA, NA, "Bórquez I, Cerdá M, González-Santa Cruz A, Krawczyk N, Castillo-Carniglia Á, Longitudinal trajectories of substance use disorder treatment use: A latent class growth analysis using a national cohort in Chile. Addiction, 119(4), 10.1111/add.16412", 2024, NA,
+  NA, NA, "Saldias-Fernández MA, Gónzalez-Santa-Cruz A, Parra-Giordano D, Interrupción del embarazo en Chile 2018-2020: rol de las variables sociodemográficas y sanitarias sobre la decisión de la mujer. Salud Publica Mex [Internet]. 10.21203/rs.3.rs-4276312/v1", 2024, NA,
+  NA, NA, "Castillo-Carniglia A, González-Santa Cruz A, Mauro PM, Sapag J, Martins SS, Ruiz-Tagle J, Gaete J, Cerdá M, Effect of residential versus ambulatory substance use disorders treatment on readmission risk in a register-based national retrospective cohort. Social Psychiatry and Psychiatric Epidemiology (Manuscrito enviado)", 2023, NA,
+  NA, NA, "Lagos-Barrios R, González-Santa Cruz A, Medina-Marín F, Flores-Alvarado S, Aguero-Jiménez A, Ciencia de Datos para la Salud Pública: Apuntes de una conversación en desarrollo, Inferencias−Boletín de Bioestadística, 8, https://revistasdex.uchile.cl/index.php/int/article/view/12844/12864", 2023, NA,
+  NA, NA, "Lagos-Barrios R, Flores-Alvarado S, González-Santa Cruz A, Medina-Marín F, Ciencia de Datos para la Salud Pública: Una conversación necesaria, Inferencias−Boletín de Bioestadística, 7, https://revistasdex.uchile.cl/index.php/int/article/view/12665/12685", 2023, NA,
+  NA, NA, "Ruiz-Tagle J, González-Santa Cruz, A, Rocha-Jiménez, T, Castillo-Carniglia, A, Does substance use disorder treatment completion reduce the risk of treatment readmission in Chile? Drug and Alcohol Dependence, 248, 109907. 10.1016/j.drugalcdep.2023.109907", 2023, NA,
+  NA, NA, "Mateo-Pinones, M, González-Santa Cruz, A, Portilla-Huidobro, R, Castillo-Carniglia, A, Evidence-based policymaking: Lessons from the Chilean Substance Use Treatment Policy, International Journal of Drug Policy, 109, 103860. 10.1016/j.drugpo.2022.103860", 2022, NA,
+  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Validación de la Escala de Liderazgo Destructivo y del Cuestionario de Conductas Negativas-Revisado en Chile, Psykhe, 32(2), 10.7764/psykhe.2020.27999.", 2022, NA,
+  NA, NA, "Tapia-Munoz T, González-Santa Cruz A, Clarke H, Morris W, Palmeiro Silva Y, Allel K, COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, 10.1080/20477724.2021.2007336", 2021, NA,
+  NA, NA, "Olivari CF, González-Santa Cruz A, Mauro PM, Martins SS, Sapag J, Gaete J, Cerdá M, Castillo-Carniglia A, Treatment outcome and readmission risk among women in women-only versus mixed-gender drug treatment programs in Chile, Journal of Substance Abuse Treatment, 108616, 10.1016/j.jsat.2021.108616", 2021, NA
 )
 
 sem <- dplyr::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where, 
-  NA, NA, "González-Santa Cruz A., Castellano J., ask development, living conditions and time to drop-out in patients of 18-29 years of age, under treatment for substance abuse disorders in Chile, 2010-2019, 2023 NIDA International Forum, US (virtual)", 2023, "Poster",
-  NA, NA, "González-Santa Cruz A., Castillo Carniglia A., Ambulatory or residential? a multi-state analysis of treatments for substance use disorders, Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online por COVID-19)", 2021, "Poster",
-  NA, NA, "Olivari C. F., González-Santa Cruz A., Castillo Carniglia A., Treatment outcome and readmission risk among women in women only versus mixed gender drug treatment programs in Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online por COVID-19)", 2021, "Poster",
-    NA, NA, "Castillo-Carniglia A., Gajardo A. I. J., Wagner T. D., Howell K., González-Santa Cruz A., Kaufman J. S., Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, 54rd Annual Meeting of the Society of Epidemiologic Research, San Diego, US (online por COVID-19)", 2021, "Poster",
-  NA, NA, "Castillo -Carniglia A., González-Santa Cruz A., Cerdá M., Delcher C., Shev A., Wintemute G. J. , Henry S. G., Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, 53rd Annual Meeting of the Society of Epidemiologic Research, Boston, US (online por COVID-19)", 2020, "Poster",  
-  NA, NA, "González-Santa Cruz A., Toro Cifuentes J. P., Percepcion de culturas organizacionales y su relación con conductas de liderazgo destructivo y prevalencia de formas de violencia laboral en una muestra representativa de trabajadores chilenos, Red Iberoamericana de Psicologia de las Organizaciones y del Trabajo RIPOT, Montevideo, Uruguay", 2019, "Poster",
-  NA, NA, "González-Santa Cruz A., Ansoleaga Moreno E., Propiedades Psicometricas de Escala de Liderazgo Destructivo y Cuestionario de Conductas Negativas Revisado en una Muestra Multiocupacional de trabajadores dependientes de Gran Santiago, Gran Valparaiso y Gran Concepcion, Chile, I Congreso Iberoamericano de Psicologia de las Organizaciones y el Trabajo, Montevideo, Uruguay", 2019, "Poster",
+  NA, NA, "Mateo-Pinones M, González-Santa Cruz A, Castillo-Carniglia Á, Assessing the impact of substance use treatment for preventing criminal justice system contact in Chile, Annual Meeting of the Society of Epidemiologic Research, Portland, US", "2023", "Poster",  
+  NA, NA, "González-Santa Cruz A, Ruiz-Tagle J, Mateo-Pinones M, Castillo-Carniglia Á, Poly-substance use, treatment completion, and contact with the justice system: a multistate analysis of treatments for substance use disorders between 2010-2019 in Chile
+, Portland, US", "2023", "Poster",
+  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Plaza de los Reyes M, Relevancia del apoyo social para la protección de la salud mental en el personal sanitario, Congreso Chileno de Salud Pública y Epidemiología, Temuco", "2023", "Poster",
+  NA, NA, "González-Santa Cruz A, Castellano J, Task development, living conditions and time to drop-out in patients of 18-29 years of age, under treatment for substance abuse disorders in Chile, 2010-2019, 2023 NIDA International Forum, US (virtual)", "2023", "Poster",
+  NA, NA, "González-Santa Cruz A, Castillo Carniglia A, Ambulatory or residential? a multi-state analysis of treatments for substance use disorders, Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online por COVID-19)", "2019-2021", "Poster",
+  NA, NA, "Olivari CF, González-Santa Cruz A, Castillo Carniglia A, Treatment outcome and readmission risk among women in women only versus mixed gender drug treatment programs in Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online por COVID-19)", "2019-2021", "Poster",
+    NA, NA, "Castillo-Carniglia A, Gajardo AIJ., Wagner TD., Howell K, González-Santa Cruz A, Kaufman JS, Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, 54rd Annual Meeting of the Society of Epidemiologic Research, San Diego, US (online por COVID-19)", "2019-2021", "Poster",
+  NA, NA, "Castillo -Carniglia A, González-Santa Cruz A, Cerdá M, Delcher C, Shev A, Wintemute GJ, Henry SG, Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, 53rd Annual Meeting of the Society of Epidemiologic Research, Boston, US (online por COVID-19)", "2019-2021", "Poster",  
+  NA, NA, "González-Santa Cruz A, Toro Cifuentes JP, Percepcion de culturas organizacionales y su relación con conductas de liderazgo destructivo y prevalencia de formas de violencia laboral en una muestra representativa de trabajadores chilenos, Red Iberoamericana de Psicologia de las Organizaciones y del Trabajo RIPOT, Montevideo, Uruguay", "2019-2021", "Poster",
+  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Propiedades Psicometricas de Escala de Liderazgo Destructivo y Cuestionario de Conductas Negativas Revisado en una Muestra Multiocupacional de trabajadores dependientes de Gran Santiago, Gran Valparaiso y Gran Concepcion, Chile, I Congreso Iberoamericano de Psicologia de las Organizaciones y el Trabajo, Montevideo, Uruguay", "2019-2021", "Poster",
 )
 
 edu <- dplyr::tribble(
@@ -85,28 +97,27 @@ edu <- dplyr::tribble(
 
 work <- dplyr::tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-  "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (nDP), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Presente", NA,"Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto. Coinvestigador Proyecto Intramural 2022-23: Assessing the impact of substance use treatment for preventing criminal justice system contact in Chile; Investigador Principal, Proyecto Intramural 2022-23: Poly-substance use, treatment completion, and contact with the justice system: a multistate analysis of treatments for substance use disorders between 2010-2019 in Chile",
-  "Profesor", "Magíster en Métodos de Investigación Social, Universidad Diego Portales","Noviembre",2022,"Noviembre", 2022, "Santiago, Chile", "Taller de Profundización en R",
+  "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (nDP), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Agosto", 2023,"Santiago, Chile", " ",
+  "Docencia", "Magíster en Métodos de Investigación Social, Universidad Diego Portales","Noviembre",2022,"Noviembre", 2023, "Santiago, Chile", "Taller de Profundización en R; Cursos de Estadística Aplicada y Procesamiento de Datos con R, y Gestión, representación y Análisis de datos cuantitativos",
   "Ayudantía", "Magíster en Métodos de Investigación Social, Universidad Diego Portales", "Abril", 2022, "Diciembre", 2022, "Santiago, Chile", "Estadística Aplicada y Procesamiento de Datos con R & Medición y análisis dimensional de datos",
   "Docencia", "Carrera Data Science, Universidad Mayor", "Agosto", 2021, "Enero", 2022, "Santiago, Chile", "Métodos Cuantitativos de Investigación para alumnos de cuarto semestre",
-  "Asistente de Investigación", "Proyecto Fondecyt 1191282, a cargo de Álvaro Castillo-Carniglia", "Marzo", 2019, "Marzo", 2022, "Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto; Impartir taller Introductorio de Manejos de Datos del Doctorado en Políticas Públicas de la Universidad Mayor.",
-  "Asistente de Investigación", "Proyecto Fondecyt 1170239, a cargo de Elisa Ansoleaga Moreno", "Marzo", 2019, "Marzo", 2020, "Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores; Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto.",
-  "Analista de Desarrollo de Personas", "Departamento de Desarrollo de Personas, Universidad de Santiago de Chile", "Enero", 2017, "Junio", 2019, "Santiago, Chile", "Analista encargado de generar información en materia de gestión, contribuir al cálculo de presupuesto anual en materia de contrataciones e incrementos de renta del personal, contribuir a la parametrización de funciones del personal, participar en la revisión y rediseño de políticas y manuales de procedimientos en materia de gestión de personas, colaborar en el diseno e implementación de un sistema de evaluación del desempeño, realizar evaluaciones psicolaborales a académicos y administrativos, entre otras tareas relacionadas. Adicionalmente, contribuir a la gestión de base de datos, estudios de renta y solicitudes de contratación del personal noacadémico de la Universidad; elaborar y ajustar perfiles de cargos del estamento no-académico; y servir como contraparte institucional en el área de reclutamiento y selección frente a consultoras para procesos masivos de contratación de académicos, jefaturas o directivos superiores.",
-  "Analista de Selección", "Departamento de Desarrollo de Personas, Universidad de Santiago de Chile", "Marzo", 2014, "Diciembre", 2019, "Santiago, Chile", "Analista Responsable del Reclutamiento y Selección de Personal del estamento No-Académico (Profesionales, Administrativos, Técnicos y Auxiliares), realizar de Estudios de Clima Organizacional, Actividades de Promoción de la Calidad de Vida Laboral, coordinar la evaluación psicolaboral de los Concursos de Contratación de Académicos, entre otras actividades."
+  "Asistente de Investigación", "Proyecto Fondecyt 1191282, a cargo de Álvaro Castillo-Carniglia y Proyecto Fondecyt 1170239, a cargo de Elisa Ansoleaga Moreno", "Marzo", 2019, "Marzo", 2022, "Santiago, Chile", " ",
+  "Analista de Desarrollo de Personas", "Departamento de Desarrollo de Personas, Universidad de Santiago de Chile", "Enero", 2014, "Diciembre", 2019, "Santiago, Chile", " ",
 )
+
 
 projects <- dplyr::tribble(
   ~area, ~accomplishment, ~year, ~where, ~detail,
-  "Colaborador metodológico Acción Salud UDP", "Facultad de Psicología, Universidad Diego Portales", 2020, "Santiago, Chile", "Participación como metodólogo para el proyecto 'Salud mental en trabajadoras/es de la salud: una mirada sobre las condiciones de empleo, la organización del trabajo y el vínculo con COVID19 atendiendo desigualdades socio-ocupacionales y de género'. Debí traduccir y adaptar una encuesta aplicada en Canadá respecto a la salud ocupacional y riesgos psicosociales de trabajadores de la salud, generar plataformas para su difusión y respuesta, analizar encuesta, elaborar informes de retroalimentación a hospitales y a la universidad, supervisar estudiantes en práctica en cuestiones análisis de datos, además de elaborar un artículo en curso.",
-  "Profesional de apoyo en metodologías de investigación social, en el marco del sondeo al sector San Borja, Comuna de Santiago", "Proyecto ACTI-CORFO, Universidad de Santiago de Chile", 2019, "Santiago, Chile", "En el marco del Proyecto Plan Maestro Modelo SmartCity, se realizaron entrevistas a expertos y usuarios sobre ciudades inteligentes y sus componentes, análisis de contenido de las entrevistas, diseño de encuesta sobre ciudades inteligentes, pre-test, aplicación en terreno, interpretación descriptiva de los resultados, elaboración de informe.",
-  "Estudiante de apoyo de investigación en Pre-práctica", "Facultad de Psicología, Universidad Diego Portales", 2013, "Santiago, Chile", "En el marco de un proyecto adjudicado por la Dra. Elisa Ansoleaga y aplicado en un hospital público de la Región Metropolitana, debí presentar y socializar los objetivos de la investigación, aplicar y tabular encuestas, además de analizar la prevalencia de sintomatología depresiva, ansiosa y su vínculo con riesgos psicosociales del personal de salud",
-  "Estudiante de apoyo de investigación", "Centro de Estudios de Argumentación y Razonamiento, Facultad de Psicología, Universidad Diego Portales", 2013, "Santiago, Chile", "Serví como personal de apoyo para el proyecto FONDECYT 1130584 titulado 'Valor, función y complejidad argumentativa en estudiantes universitarios chilenos: el caso en la regiones de Coquimbo y Metropolitana', y en el que recopilé y presenté antecedentes teóricos de la encuesta, contribuí a estandarizar los reactivos y apliqué encuestas"
+  "Colaborador metodológico Acción Salud UDP", "Facultad de Psicología, Universidad Diego Portales", 2020, "Santiago, Chile", " ",
+  "Profesional de apoyo en metodologías de investigación social, en el marco del sondeo al sector San Borja, Comuna de Santiago", "Proyecto ACTI-CORFO, Universidad de Santiago de Chile", 2019, "Santiago, Chile", " ",
+  "Estudiante de apoyo de investigación en Pre-práctica", "Facultad de Psicología, Universidad Diego Portales", 2013, "Santiago, Chile", " ",
+   "Estudiante de apoyo de investigación", "Centro de Estudios de Argumentación y Razonamiento, Facultad de Psicología, Universidad Diego Portales", 2013, "Santiago, Chile", " "
 )
 
 ```
 
 # Experiencia laboral
-
+\fontsize{10pt}{1.5em}\color{text}
 ```{r EMPLOYMENT}
 work %>%
   detailed_entries(
@@ -118,10 +129,8 @@ work %>%
   )
 ```
 
-\pagebreak
-
 # Otros Proyectos
-
+\fontsize{10pt}{1.5em}\color{text}
 ```{r PROJECTS}
 projects %>%
   detailed_entries(
@@ -136,7 +145,7 @@ projects %>%
 # Actividades de investigación
 
 ## Publicaciones
-
+\fontsize{10pt}{1.5em}\color{text}
 ```{r pubs}
 pubs %>%
   detailed_entries(
@@ -147,12 +156,10 @@ pubs %>%
     #where = where
   )
 ```
-\pagebreak
 
 ## Seminarios/ Congresos
-
+\fontsize{10pt}{1.5em}\color{text}
 ```{r sem}
-#\pagebreak
 sem %>%
   detailed_entries(
     #with = area,
@@ -163,19 +170,8 @@ sem %>%
   )
 ```
 
-<br>
-
-## Revisor de artículos en revistas científicas
-
-American Journal of Preventive Medicine,  International Journal of Workplace Health Management, Psicoperspectivas, Revista Universidad y Salud, Quaderns de Psicologia, Medwave, Addiction.
-
-## Otras afiliaciones
-Society for Epidemiologic Research: Clearfield, UT, US
-2023-
-Miembro
-
 # Estudios formales de interés
-
+\fontsize{10pt}{1.5em}\color{text}
 ```{r EDUCATION}
 edu %>%
   detailed_entries(
@@ -196,3 +192,26 @@ skills %>%
     what = skills
   )
 ```
+
+<br>
+
+\hfill \break
+
+\fontsize{10pt}{1.5em}\color{text}
+## Revisor de artículos en revistas científicas
+\begin{footnotesize}
+American Journal of Preventive Medicine, International Journal of Workplace Health Management, Psicoperspectivas, Revista Universidad y Salud, Quaderns de Psicologia, Medwave, Addiction, Health Policy and Technology.
+\end{footnotesize}
+\fontsize{10pt}{1.5em}\color{text}
+
+\hfill \break
+
+## Otras afiliaciones
+\begin{footnotesize}
+Society for Epidemiologic Research: Clearfield, UT, US; 2023- ; Miembro
+Grupo de Ciencia de Datos y Salud Pública, Escuela de Salud Pública, Santiago, Chile; Miembro
+\end{footnotesize}
+\pagebreak
+
+\linebreak
+
