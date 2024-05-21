@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.17)  17 MAY 2024 19:01
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.17)  21 MAY 2024 16:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -813,7 +813,7 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 (Font)              scaled to size 4.74948pt on input line 153.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/m/n' will be
-(Font)              scaled to size 9.5pt on input line 172.
+(Font)              scaled to size 9.5pt on input line 170.
 [1
 
 ] [2]
@@ -824,12 +824,12 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.212 
+l.210 
        
 Here is how much of TeX's memory you used:
  32877 strings out of 476705
  674653 string characters out of 5799573
- 1968406 words of memory out of 5000000
+ 1967406 words of memory out of 5000000
  54406 multiletter control sequences out of 15000+600000
  564646 words of font info for 145 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
