@@ -72,14 +72,15 @@ pubs <- tibble::tribble(
   NA, NA, "Gajardo AIJ, Wagner TD, Howell K, González-Santa Cruz A, Kaufman JS, Castillo-Carniglia A, Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, The Lancet Regional Health Americas, 100082, 10.1016/j.lana.2021.100082", "2019-2022", NA,
   NA, NA, "González-Santa Cruz A, Toro Cifuentes JP, Culturas organizacionales y factores de riesgo psicosociales en organizaciones chilenas Un analisis de clases latentes, Psicoperspectivas, 20, 1, 10.5027/psicoperspectivas-Vol20-Issue1-fulltext-2006", "2019-2022", NA,
   NA, NA, "Castillo-Carniglia A, González-Santa Cruz A, Cerdá M, Delcher C, Shev A, Wintemute GJ, Henry SG, Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, Drug and alcohol dependence, 1, 221, /j.drugalcdep.2020.108405", "2019-2022", NA,
-  NA, NA, "Ansoleaga E, Ahumada M, González-Santa Cruz A, Association of Workplace Bullying and Workplace Vulnerability in the Psychological Distress of Chilean Workers, International journal of environmental research and public health, 16, 20, 1-14, DOI: 10.3390/ijerph16204039", "2019-2022", NA
+  NA, NA, "Ansoleaga E, Ahumada M, González-Santa Cruz A, Association of Workplace Bullying and Workplace Vulnerability in the Psychological Distress of Chilean Workers, International journal of environmental research and public health, 16, 20, 1-14, 10.3390/ijerph16204039", "2019-2022", NA
 )
 
 sem <- dplyr::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where, 
+    NA, NA, "González-Santa Cruz A, Castillo-Carniglia Á, Trayectorias de hospitalización por condiciones vinculadas a trastornos de salud mental y consumo de sustancias en usuarios/as jóvenes de población general y pertenecientes a pueblos originarios, 2018-2021, Chile, XVLII Jornadas Nacionales de Estadística 2024, Valdivia", "2024", "Poster",
+  NA, NA, "González-Santa Cruz A, Castillo-Carniglia Á, Mortality following substance use disorder treatment: population-based record-linkage retrospective cohort design, Annual Meeting of the Society of Epidemiologic Research, Texas, US", "2024", "Poster",
   NA, NA, "Mateo-Pinones M, González-Santa Cruz A, Castillo-Carniglia Á, Assessing the impact of substance use treatment for preventing criminal justice system contact in Chile, Annual Meeting of the Society of Epidemiologic Research, Portland, US", "2023", "Poster",  
-  NA, NA, "González-Santa Cruz A, Ruiz-Tagle J, Mateo-Pinones M, Castillo-Carniglia Á, Poly-substance use, treatment completion, and contact with the justice system: a multistate analysis of treatments for substance use disorders between 2010-2019 in Chile
-, Portland, US", "2023", "Poster",
+  NA, NA, "González-Santa Cruz A, Ruiz-Tagle J, Mateo-Pinones M, Castillo-Carniglia Á, Poly-substance use, treatment completion, and contact with the justice system: a multistate analysis of treatments for substance use disorders between 2010-2019 in Chile, Portland, US", "2023", "Poster",
   NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Plaza de los Reyes M, Relevancia del apoyo social para la protección de la salud mental en el personal sanitario, Congreso Chileno de Salud Pública y Epidemiología, Temuco", "2023", "Poster",
   NA, NA, "González-Santa Cruz A, Castellano J, Task development, living conditions and time to drop-out in patients of 18-29 years of age, under treatment for substance abuse disorders in Chile, 2010-2019, 2023 NIDA International Forum, US (virtual)", "2023", "Poster",
   NA, NA, "González-Santa Cruz A, Castillo Carniglia A, Ambulatory or residential? a multi-state analysis of treatments for substance use disorders, Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online por COVID-19)", "2019-2021", "Poster",
@@ -101,8 +102,10 @@ edu <- dplyr::tribble(
 
 work <- dplyr::tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+  "Docencia", "Diplomado Data Science para Ciencias Sociales, Universidad Diego Portales","Noviembre",2024,"Enero", 2025, "Santiago, Chile", "Reproducibilidad y comunicación de resultados",
+  "Docencia", "Carrera Medicina, Universidad de Chile","Agosto",2024,"Diciembre", 2024, "Santiago, Chile", "Epidemiología analítica",
   "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (nDP), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Agosto", 2023,"Santiago, Chile", " ",
-  "Docencia", "Magíster en Métodos de Investigación Social, Universidad Diego Portales","Noviembre",2022,"Noviembre", 2023, "Santiago, Chile", "Taller de Profundización en R; Cursos de Estadística Aplicada y Procesamiento de Datos con R, y Gestión, representación y Análisis de datos cuantitativos",
+  "Docencia", "Magíster en Métodos de Investigación Social, Universidad Diego Portales","Noviembre",2022,"Noviembre", 2024, "Santiago, Chile", "Taller de Profundización en R; Cursos de Estadística Aplicada y Procesamiento de Datos con R, y Gestión, representación y Análisis de datos cuantitativos",
   "Ayudantía", "Magíster en Métodos de Investigación Social, Universidad Diego Portales", "Abril", 2022, "Diciembre", 2022, "Santiago, Chile", "Estadística Aplicada y Procesamiento de Datos con R & Medición y análisis dimensional de datos",
   "Docencia", "Carrera Data Science, Universidad Mayor", "Agosto", 2021, "Enero", 2022, "Santiago, Chile", "Métodos Cuantitativos de Investigación para alumnos de cuarto semestre",
   "Asistente de Investigación", "Proyecto Fondecyt 1191282, a cargo de Álvaro Castillo-Carniglia y Proyecto Fondecyt 1170239, a cargo de Elisa Ansoleaga Moreno", "Marzo", 2019, "Marzo", 2022, "Santiago, Chile", " ",
