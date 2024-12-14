@@ -1,4 +1,4 @@
-
+rm(list=ls())
 skills <- dplyr::tribble(
   ~area, ~skills,
   "Lenguajes de programación", "JavaScript (Básico), R (Intermedio-Avanzado), VBA (Básico), Python (Básico)",
@@ -11,8 +11,8 @@ pubs <- tibble::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where,
   NA, NA, "Dinamarca-Aravena KA, Rocha-Jiménez T, Morales-Miranda S, Castillo-Carniglia Á, González-Santa Cruz A, Respondent Driving Sampling online (Web RDS) as a strategy to access hard-to-reach but non-hidden populations: the case of health professionals working in Chilean schools. Journal of Social Research Methodology (Manuscrito enviado)", "2024", NA,
   NA, NA, "Castellano J, González-Santa Cruz A, Castillo-Carniglia Á, Gaete J, Association between living arrangements and time to drop out in patients between 18 and 29 years of age, under treatment for substance abuse disorders in Chile, 2010-2019. Pre-print. 10.21203/rs.3.rs-4276312/v1", "2024", NA,
-  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Otra lección de la pandemia: relevancia del apoyo social para la protección de la salud mental en trabajadores de la salud. Revista Médica de Chile (Aceptado)","2024", NA,
-  NA, NA, "Saldías Fernández MA, Gónzalez-Santa-Cruz A, Martínez-Ordenes M, Parra-Giordano D, Factores sociodemográficos-sanitarios sobre la decisión de interrupción del embarazo, Chile: un análisis de clases latentes. Global health promotion. (Aceptado)", "2024", NA,
+  NA, NA, "González-Santa Cruz A, Ansoleaga-Moreno E, Otra lección de la pandemia: relevancia del apoyo social para la protección de la salud mental en trabajadores de la salud. Revista Médica de Chile, 152(08), https://www.revistamedicadechile.cl/index.php/rmedica/article/view/10178","2024", NA,
+  NA, NA, "Saldías Fernández MA, Gónzalez-Santa-Cruz A, Martínez-Ordenes M, Parra-Giordano D, Factores sociodemográficos-sanitarios sobre la decisión de interrupción del embarazo, Chile: un análisis de clases latentes. Global health promotion, 1757-9759; Vol 0(0): 1–11; 1257477. 10.1177/17579759241257477", "2024", NA,
   NA, NA, "Mateo-Pinones M, González-Santa Cruz A, Bond C, McGee T, Payne J, & Castillo-Carniglia Á, Substance use treatment completion and criminal justice system contact in Chile: A retrospective, linked data, cohort study. Addiction. 10.1111/add.16488", "2024", NA,
   NA, NA, "Bórquez I, Cerdá M, González-Santa Cruz A, Krawczyk N, Castillo-Carniglia Á, Longitudinal trajectories of substance use disorder treatment use: A latent class growth analysis using a national cohort in Chile. Addiction, 119(4), 10.1111/add.16412", "2024", NA,
   NA, NA, "Saldias-Fernández MA, Gónzalez-Santa-Cruz A, Parra-Giordano D, Interrupción del embarazo en Chile 2018-2020: rol de las variables sociodemográficas y sanitarias sobre la decisión de la mujer. Salud Publica Mex [Internet]. 10.21149/14670", "2024", NA,
@@ -32,7 +32,7 @@ pubs <- tibble::tribble(
 
 sem <- dplyr::tribble(
   ~area, ~accomplishment, ~detail, ~year, ~where,
-  NA, NA, "González-Santa Cruz A, Castillo-Carniglia Á, Trayectorias de hospitalización por condiciones vinculadas a trastornos de salud mental y consumo de sustancias en usuarios/as jóvenes de población general y pertenecientes a pueblos originarios, 2018-2021, Chile, XVLII Jornadas Nacionales de Estadística, Valdivia", "2024", "Poster",
+  NA, NA, "González-Santa Cruz A, Medina-Gay S, Flores-Alvarado, S, Trayectorias de hospitalización por condiciones vinculadas a trastornos de salud mental y consumo de sustancias en usuarios/as jóvenes de población general y pertenecientes a pueblos originarios, 2018-2021, Chile, XVLII Jornadas Nacionales de Estadística, Valdivia", "2024", "Poster",
   NA, NA, "González-Santa Cruz A, Castillo-Carniglia Á, Mortality following substance use disorder treatment: population-based record-linkage retrospective cohort design, Annual Meeting of the Society of Epidemiologic Research, Texas, US", "2024", "Poster",
   NA, NA, "Mateo-Pinones M, González-Santa Cruz A, Castillo-Carniglia Á, Assessing the impact of substance use treatment for preventing criminal justice system contact in Chile, Annual Meeting of the Society of Epidemiologic Research, Portland, US", "2023", "Poster",  
   NA, NA, "González-Santa Cruz A, Ruiz-Tagle J, Mateo-Pinones M, Castillo-Carniglia Á, Poly-substance use, treatment completion, and contact with the justice system: a multistate analysis of treatments for substance use disorders between 2010-2019 in Chile
@@ -58,6 +58,7 @@ edu <- dplyr::tribble(
 
 work <- dplyr::tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+  "Tesista", "Proyecto Fondecyt 1240138, a cargo de Álvaro Castillo-Carniglia", "Diciembre", 2024, "Febrero", 2026,"Santiago, Chile", " ",
   "Docencia", "Diplomado Data Science para Ciencias Sociales, Universidad Diego Portales","Noviembre",2024,"Enero", 2025, "Santiago, Chile", "Reproducibilidad y comunicación de resultados",
   "Docencia", "Carrera Medicina, Universidad de Chile","Agosto",2024,"Diciembre", 2024, "Santiago, Chile", "Epidemiología analítica",
   "Asistente de Investigación", "Núcleo Milenio para la Evaluación y Análisis de Políticas de Drogas (nDP), dirigido por Álvaro Castillo-Carniglia", "Marzo", 2022, "Agosto", 2023,"Santiago, Chile", " ",

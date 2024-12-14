@@ -72,10 +72,10 @@ pubs %>%
 
 <br>
 
-\vspace{0.8cm}
+\vspace{0.4cm}
 
 ## Seminarios/congresos
-\fontsize{9.5pt}{1.2em}\color{text}
+\fontsize{9.5pt}{1.15em}\color{text}
 ```{r sem}
 #\pagebreak
 sem %>%
@@ -91,7 +91,7 @@ sem %>%
 <br>
 
 # Estudios formales de interés
-\fontsize{9.5pt}{1.2em}\color{text}
+\fontsize{9.5pt}{1.15em}\color{text}
 ```{r EDUCATION}
 edu %>%
   detailed_entries(
