@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.12)  14 DEC 2024 20:04
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.12)  16 DEC 2024 23:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -66,7 +66,7 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 ) (c:/Users/andre/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (c:/Users/andre/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count268
 \Gm@cntv=\count269
@@ -828,10 +828,10 @@ Type  H <return>  for immediate help.
 l.204 
        
 Here is how much of TeX's memory you used:
- 32785 strings out of 475964
- 673618 string characters out of 5776121
- 1239907 words of memory out of 5000000
- 55044 multiletter control sequences out of 15000+600000
+ 32792 strings out of 475964
+ 673697 string characters out of 5776121
+ 1239938 words of memory out of 5000000
+ 55051 multiletter control sequences out of 15000+600000
  565359 words of font info for 147 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  131i,11n,135p,545b,643s stack positions out of 10000i,1000n,20000p,200000b,200000s
