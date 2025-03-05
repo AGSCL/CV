@@ -1,29 +1,15 @@
 ---
 name: Andrés
 surname: González Santa Cruz
-position: "Asistente de Investigación y Estudiante Doctorado en Salud Pública UCH"
 address: "Santiago de Chile"
 profilepic: "CURSO-COMPUTACION-ALONSO.jpg"
-email: "gonzalez.santacruz.andres@gmail.com"
 github: AGSCL
-linkedin: andrés-gonzález-santa-cruz
 orcid: 0000-0002-5166-9121
-date: "`r readr::parse_date(format(Sys.time(), '%d %B %Y'),'%d %B %Y',locale=readr::locale('en'))`"
 headcolor: 2f40d8
-aboutme: "He trabajado como asistente de investigación aplicando técnicas de análisis de datos. Mis áreas de interés son el estudio de políticas públicas sobre tratamiento de drogas, factores de riesgo psicosociales y metodologías de investigación cuantitativas. Este currículo fue compilado en código."
-docname: CV proveniente de \href{hhttps://github.com/AGSCL/CV}{https://github.com/AGSCL/CV}
+docname: CV
 output:   
   vitae::awesomecv:
-    pandoc_args: ["--lua-filter=lua/strong.lua"] 
-    keep_tex: false
-    latex_engine: xelatex    
-header-includes:
-- \geometry{left=1cm, top=1cm, right=1cm, bottom=1cm, footskip=0.5cm}
-# - \let\headerfont\rmfamily
-# - \let\headerfontlight\rmfamily
-# - \let\footerfont\rmfamily
-# - \let\bodyfont\rmfamily
-# - \let\bodyfontlight\rmfamily
+    latex_engine: xelatex
 ---
 
 ```{r setup, include=FALSE}
@@ -43,33 +29,87 @@ packages <- c('vitae'     # The CV's LaTeX Template
 xfun::pkg_attach2(packages, message = FALSE)
 
 options(encoding = "UTF-8")
-load("cv_data.RData")
+
+skills <- dplyr::tribble(
+  ~area, ~skills,
+  "Lenguajes de programación", "JavaScript (Básico), R (Intermedio-Avanzado), VBA (Básico)",
+  "Lenguajes Markup", "CSS, HTML, LaTeX, Markdown, RMarkdown",
+  "Otros lenguajes", "YAML",
+  "Control de versiones", "Git",
+  "Editores de texto", "RStudio, Visual Studio, Visual Studio Code",
+  "Microsoft Office", "Excel, Outlook, OneNote, PowerBI, PowerPoint, Word",
+  "Inglés", "Manejo escrito y oral (ETAAPP 89%, Level 6: Advance Step One)"
+)
+
+honors <- dplyr::tribble(
+  ~area, ~accomplishment, ~year, ~where, ~detail,
+  "Facultad de Psicología", "Aprobado con distinción máxima", 2014, "Universidad Diego Portales",NA,
+)
+
+pubs <- dplyr::tribble(
+  ~area, ~accomplishment, ~detail, ~year, ~where, 
+  NA, NA, "Tapia-Munoz T., González-Santa Cruz A., Clarke H., Morris W., Palmeiro Silva Y., Allel K., COVID 19 attributed mortality and ambient temperature A global ecological study using a two-stage regression model, Pathogens and Global Health, 2007336, DOI/URL: 10.1080/20477724.2021.2007336", 2021, NA,
+  NA, NA, "Olivari C. F., González-Santa Cruz A., Mauro P. M., Martins S. S., Sapag J., Gaete J., Cerdá M., Castillo-Carniglia A., Treatment outcome and readmission risk among women in women-only versus mixed-gender drug treatment programs in Chile, Journal of Substance Abuse Treatment, 108616, DOI/URL: 10.1016/j.jsat.2021.108616", 2021, NA,
+  NA, NA, "Gajardo A. I. J., Wagner T. D., Howell K., González-Santa Cruz A., Kaufman J. S., Castillo-Carniglia A., Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, The Lancet Regional Health Americas, 100082, DOI/URL: 10.1016/j.lana.2021.100082", 2021, NA,
+  NA, NA, "González-Santa Cruz A., Toro Cifuentes J. P., Culturas organizacionales y factores de riesgo psicosociales en organizaciones chilenas Un analisis de clases latentes, Psicoperspectivas, 20, 1, DOI/URL: 10.5027/psicoperspectivas-Vol20-Issue1-fulltext-2006", 2021, NA,
+  NA, NA, "Castillo -Carniglia A., González-Santa Cruz A., Cerdá M., Delcher C., Shev A., Wintemute G. J. , Henry S. G., Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, Drug and alcohol dependence, 1, 221, 1-7, DOI/URL: 10.1016/j.drugalcdep.2020.108405", 2020, NA,
+  NA, NA, "Ansoleaga E., Ahumada M., González-Santa Cruz A., Association of Workplace Bullying and Workplace Vulnerability in the Psychological Distress of Chilean Workers, International journal of environmental research and public health, 16, 20, 1-14, DOI/URL: 10.3390/ijerph16204039", 2019, NA
+)
+
+sem <- dplyr::tribble(
+  ~area, ~accomplishment, ~detail, ~year, ~where, 
+  NA, NA, "González-Santa Cruz A., Castillo Carniglia A., Ambulatory or residential? a multi-state analysis of treatments for substance use disorders, Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online due to COVID-19)", 2021, NA,
+  NA, NA, "Olivari C. F., González-Santa Cruz A., Castillo Carniglia A., Treatment outcome and readmission risk among women in women only versus mixed gender drug treatment programs in Chile, College on Problems of Drug Dependence 83rd Annual Scientific Meeting, Nashville, Tennessee, US (online due to COVID-19)", 2021, NA,
+    NA, NA, "Castillo-Carniglia A., Gajardo A. I. J., Wagner T. D., Howell K., González-Santa Cruz A., Kaufman J. S., Effects of 2019's social protests on emergency health services utilization and case severity in Santiago, Chile, 54rd Annual Meeting of the Society of Epidemiologic Research, San Diego, US (online due to COVID-19)", 2021, NA,
+  NA, NA, "Castillo -Carniglia A., González-Santa Cruz A., Cerdá M., Delcher C., Shev A., Wintemute G. J. , Henry S. G., Changes in opioid prescribing after implementation of mandatory registration and proactive reports within California's prescription drug monitoring program, 53rd Annual Meeting of the Society of Epidemiologic Research, Boston, US (online due to COVID-19)", 2020, NA,  
+  NA, NA, "González-Santa Cruz A., Toro Cifuentes J. P., Percepcion de culturas organizacionales y su relación con conductas de liderazgo destructivo y prevalencia de formas de violencia laboral en una muestra representativa de trabajadores chilenos, Red Iberoamericana de Psicologia de las Organizaciones y del Trabajo RIPOT, URUGUAY, Montevideo", 2019, NA,
+  NA, NA, "González-Santa Cruz A., Ansoleaga Moreno E., Propiedades Psicometricas de Escala de Liderazgo Destructivo y Cuestionario de Conductas Negativas Revisado en una Muestra Multiocupacional de trabajadores dependientes de Gran Santiago, Gran Valparaiso y Gran Concepcion, Chile, I Congreso Iberoamericano de Psicologia de las Organizaciones y el Trabajo, URUGUAY, Montevideo", 2019, NA
+)
+
+edu <- dplyr::tribble(
+  ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
+  "Diplomado en Bioestadística Avanzada", 2021, 2021, "Universidad Católica", "Online",NA,
+  "Magíster en Métodos para la Investigación Social", 2018, 2019, "Universidad Diego Portales", "Santiago, Chile",NA,
+  "Diplomado en Métodos Cuentitativos para la Investigación Social", 2017, 2017, "Universidad Diego Portales", "Santiago, Chile",NA,
+  "Título profesional de Psicólogo", 2009, 2014, "Universidad Diego Portales", "Santiago, Chile",NA,
+)
+
+work <- dplyr::tribble(
+  ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+  "Docencia", "Carrera Data Science, Universidad Mayor", "Agosto", 2021, "Enero 2022", NA, "Santiago, Chile", "Métodos Cuantitativos de Investigación para alumnos de cuarto semestre",
+  "Asistente de Investigación", "Proyecto Fondecyt 1191282, a cargo de Álvaro Castillo-Carniglia", "Marzo", 2019, "Presente", NA, "Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores;Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto; Impartir taller Introductorio de Manejos de Datos del Doctorado en Políticas Públicas de la Universidad Mayor.",
+  "Asistente de Investigación", "Proyecto Fondecyt 1170239, a cargo de Elisa Ansoleaga Moreno", "Marzo", 2019, "Marzo", 2020, "Santiago, Chile", "Estructurar bases de datos del estudio, conforme a lineamientos de los investigadores; Posibilitar el acceso de investigadores y estudiantes a las bases de datos actualizadas; Buscar información de material bibliográfico en bases de recursos electrónicos; Prestar apoyo y seguimiento en la confección y escritura de artículos científicos; Contribuir a generar datos que respondan a los objetivos del proyecto y que permitan poner a prueba sus hipótesis; Atender consultas de los(as) investigadores(as) en materia de interés del proyecto.",
+  "Analista de Desarrollo de Personas", "Departamento de Desarrollo de Personas, Universidad de Santiago de Chile", "Enero", 2017, "Junio", 2019, "Santiago, Chile", "Analista encargado de generar información en materia de gestión, contribuir al cálculo de presupuesto anual en materia de contrataciones e incrementos de renta del personal, contribuir a la parametrización de funciones del personal, participar en la revisión y rediseño de políticas y manuales de procedimientos en materia de gestión de personas, colaborar en el diseno e implementación de un sistema de evaluación del desempeño, realizar evaluaciones psicolaborales a académicos y administrativos, entre otras tareas relacionadas. Adicionalmente, contribuir a la gestión de base de datos, estudios de renta y solicitudes de contratación del personal noacadémico de la Universidad; elaborar y ajustar perfiles de cargos del estamento no-académico; y servir como contraparte institucional en el área de reclutamiento y selección frente a consultoras para procesos masivos de contratación de académicos, jefaturas o directivos superiores.",
+  "Analista de Selección", "Departamento de Desarrollo de Personas, Universidad de Santiago de Chile", "Marzo", 2014, "Diciembre", 2019, "Santiago, Chile", "Analista Responsable del Reclutamiento y Selección de Personal del estamento No-Académico (Profesionales, Administrativos, Técnicos y Auxiliares), realizar de Estudios de Clima Organizacional, Actividades de Promoción de la Calidad de Vida Laboral, coordinar la evaluación psicolaboral de los Concursos de Contratación de Académicos, entre otras actividades."
+)
+
+projects <- dplyr::tribble(
+  ~area, ~accomplishment, ~year, ~where, ~detail,
+  "Colaborador metodológico Acción Salud UDP", "Facultad de Psicología, Universidad Diego Portales", 2020, "Santiago, Chile", "Participación como metodólogo para el proyecto 'Salud mental en trabajadoras/es de la salud: una mirada sobre las condiciones de empleo, la organización del trabajo y el vínculo con COVID19 atendiendo desigualdades socio-ocupacionales y de género'. Debí traduccir y adaptar una encuesta aplicada en Canadá respecto a la salud ocupacional y riesgos psicosociales de trabajadores de la salud, generar plataformas para su difusión y respuesta, analizar encuesta, elaborar informes de retroalimentación a hospitales y a la universidad, supervisar estudiantes en práctica en cuestiones análisis de datos, además de elaborar un artículo en curso.",
+  "Profesional de apoyo en metodologías de investigación social, en el marco del sondeo al sector San Borja, Comuna de Santiago", "Proyecto ACTI-CORFO, Universidad de Santiago de Chile", 2019, "Santiago, Chile", "En el marco del Proyecto Plan Maestro Modelo SmartCity, se realizaron entrevistas a expertos y usuarios sobre ciudades inteligentes y sus componentes, análisis de contenido de las entrevistas, diseño de encuesta sobre ciudades inteligentes, pre-test, aplicación en terreno, interpretación descriptiva de los resultados, elaboración de informe.",
+  "Estudiante de apoyo de investigación en Pre-práctica", "Facultad de Psicología, Universidad Diego Portales", 2013, "Santiago, Chile", "En el marco de un proyecto adjudicado por la Dra. Elisa Ansoleaga y aplicado en un hospital público de la Región Metropolitana, debí presentar y socializar los objetivos de la investigación, aplicar y tabular encuestas, además de analizar la prevalencia de sintomatología depresiva, ansiosa y su vínculo con riesgos psicosociales del personal de salud",
+  "Estudiante de apoyo de investigación", "Centro de Estudios de Argumentación y Razonamiento, Facultad de Psicología, Universidad Diego Portales", 2013, "Santiago, Chile", "Serví como personal de apoyo para el proyecto FONDECYT 1130584 titulado 'Valor, función y complejidad argumentativa en estudiantes universitarios chilenos: el caso en la regiones de Coquimbo y Metropolitana', y en el que recopilé y presenté antecedentes teóricos de la encuesta, contribuí a estandarizar los reactivos y apliqué encuestas"
+)
 
 ```
 
 # Experiencia laboral
 
 ```{r EMPLOYMENT}
-work <- work %>%
-  dplyr::mutate(
-    title = glue::glue("# {title}\n\n", .na = ""),
-    unit = glue::glue("{unit}\n\n", .na = ""),
-    detail = glue::glue("{detail}\n\n", .na = "\n"),
-    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}", .na = ""),
-    where = glue::glue("{where}\n\n", .na = "")
-  )
 work %>%
   detailed_entries(
     with = title,
     what = unit,
     why = detail,
-   # when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
     where = where
   )
 ```
 
+\pagebreak
+
 # Otros Proyectos
-\fontsize{10pt}{1.5em}\color{text}
+
 ```{r PROJECTS}
 projects %>%
   detailed_entries(
@@ -80,49 +120,56 @@ projects %>%
     where = where
   )
 ```
-\pagebreak
-# Actividades de investigación
+
+# Otras actividades científicas
+
 ## Publicaciones
-\fontsize{10pt}{1.5em}\color{text}
+
 ```{r pubs}
 pubs %>%
   detailed_entries(
-    #with = area,
-    #what = accomplishment,
-    why = detail,
-    when = year
-    #where = where
-  )
-```
-
-## Seminarios/ Congresos
-\fontsize{10pt}{1.5em}\color{text}
-```{r sem}
-sem %>%
-  detailed_entries(
-    #with = area,
-    #what = accomplishment,
+    with = area,
+    what = accomplishment,
     why = detail,
     when = year,
     where = where
   )
 ```
 
+\pagebreak
+
+## Seminarios/ Congresos
+
+```{r sem}
+sem %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+```
+
+<br>
+
+\vspace{0.4cm}
+
 # Estudios formales de interés
-\fontsize{10pt}{1.5em}\color{text}
+\fontsize{9.5pt}{1.15em}\color{text}
 ```{r EDUCATION}
 edu %>%
   detailed_entries(
     with = inst,
     what = degree,
-    #why = detail,
-    when = ifelse(is.na(endYear),glue::glue("{startYear} --> Presente",.na = ""),glue::glue("{startYear} --> {endYear}",.na = "")),
+    why = detail,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
     where = where
   )
 ```
 
 # Habilidades
-
+\fontsize{9.5pt}{1.15em}\color{text}
 ```{r SKILLS}
 skills %>%
   detailed_entries(
@@ -130,27 +177,3 @@ skills %>%
     what = skills
   )
 ```
-
-<br>
-
-\hfill \break
-
-\fontsize{10pt}{1.5em}\color{text}
-## Revisor de artículos en revistas científicas
-\begin{footnotesize}
-American Journal of Preventive Medicine, International Journal of Workplace Health Management, Psicoperspectivas, Revista Universidad y Salud, Quaderns de Psicologia, Medwave, Addiction, Health Policy and Technology.
-\end{footnotesize}
-\fontsize{10pt}{1.5em}\color{text}
-
-\hfill \break
-
-## Otras afiliaciones
-\begin{footnotesize}
-Society for Epidemiologic Research: Clearfield, UT, US; 2023- ; Miembro
-
-Grupo de Ciencia de Datos y Salud Pública, Escuela de Salud Pública, Santiago, Chile; Miembro
-\end{footnotesize}
-\pagebreak
-
-\linebreak
-

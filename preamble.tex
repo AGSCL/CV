@@ -1,0 +1,12 @@
+% preamble.tex
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\awesomecv@sectionfont}{\color{text}}{\color{text}}{}{}
+\patchcmd{\section}{\@startsection{section}{1}}{\@startsection{section*}{1}}{}{}
+\let\oldsection\section
+\renewcommand{\section}[1]{%
+  \ifnum\value{section}<5\relax
+    \oldsection{#1}%
+  \fi%
+}
+\makeatother

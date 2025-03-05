@@ -1,32 +1,44 @@
 ---
 name: Andrés
-surname: González Santa Cruz
+surname: González Santa Cruz 
+profilepic: "CURSO-COMPUTACION-ALONSO.jpg"
 position: "Estudiante Doctorado en Salud Pública UCH"
-address: "Santiago de Chile"
-email: "gonzalez.santacruz.andres@gmail.com"
-github: AGSCL
-linkedin: andrés-gonzález-santa-cruz
-orcid: 0000-0002-5166-9121
-date: "`r readr::parse_date(format(Sys.time(), '%d %B %Y'),'%d %B %Y',locale=readr::locale('en'))`"
+address: "Santiago de Chile" 
+email: gonzalez.santacruz.andres%40gmail.com #debe estar entre corchetes sino da error
+github: AGSCL #
+linkedin: andr%C3%A9s-gonz%C3%A1lez-santa-cruz #ojo con el formato
+orcid: 0000-0002-5166-9121 
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+docname: CV proveniente de \url{https://github.com/AGSCL/CVshort}
 headcolor: 2f40d8
-docname: CV proveniente de \href{hhttps://github.com/AGSCL/CV}{https://github.com/AGSCL/CV}
+linkcolor: magenta #aboutme: "He trabajado como asistente de investigación aplicando técnicas de análisis de datos. Mis áreas de interés son el estudio de políticas públicas sobre tratamiento de drogas, factores de riesgo psicosociales y metodologías de investigación cuantitativas. Este currículo fue compilado en código."
+lang: es
 output: 
   vitae::awesomecv:
+    keep_tex: true
     pandoc_args: ["--lua-filter=lua/strong.lua"] 
-    keep_tex: false
-    latex_engine: xelatex   
+    latex_engine: xelatex
+    page_total: true
 header-includes:
-- \geometry{left=.5cm, top=.75cm, right=.5cm, bottom=.75cm, footskip=0.5cm}
-- \setlength{\parskip}{0.5em}      # Adjusts spacing between paragraphs
-- \setlength{\baselineskip}{1.2em} # Adjusts line spacing within paragraphs
+  - \geometry{left=.5cm, top=.75cm, right=.5cm, bottom=.75cm, footskip=0.5cm}
+  - \setlength{\parskip}{0.5em}      # Adjusts spacing between paragraphs
+  - \setlength{\baselineskip}{0.9em} # Adjusts line spacing within paragraphs
+  - \input{fix_sections.tex}
+  - \setlength{\tabcolsep}{4pt}
+#  - \renewcommand{\arraystretch}{1.3}
+  - \usepackage{setspace}
+  - \setstretch{1.0}  #largo total de cada sección
 ---
 
 ```{r setup, include=FALSE}
-#"pdflatex", "lualatex", "xelatex",:'arg' should be one of "pdflatex", "lualatex", "xelatex", "tectonic"
+if(Sys.info()["sysname"]=="Windows"){
+if (getRversion() != "4.4.0") { stop("Requires R version 4.4.0; Actual: ", getRversion()) }
+}
 options(encoding = "UTF-8")
 knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
                       message = FALSE)
+options(tibble.print_max = Inf)
 require(xfun)
 packages <- c('vitae'     # The CV's LaTeX Template
              ,'tibble'    # Data structure for tribbles
@@ -37,30 +49,46 @@ packages <- c('vitae'     # The CV's LaTeX Template
             )
 xfun::pkg_attach2(packages, message = FALSE)
 
-options(encoding = "UTF-8")
-load("cv_data.RData")
+source("cv_data.R")
 
 ```
 
 # Experiencia laboral
-\fontsize{9pt}{1em}\color{text}
-```{r EMPLOYMENT}
-work %>%
+\fontsize{9pt}{1.1em}\color{text}\renewcommand{\arraystretch}{1.5}\setstretch{1.15}
+```{r EMPLOYMENT, eval=T}
+current_year <- lubridate::year(Sys.Date())
+
+work_manual <- work_manual%>% 
+  mutate(
+    endYear = ifelse(endYear > current_year, current_year, endYear),
+    endMonth = ifelse(endYear == current_year & !is.na(endMonth) & endMonth > lubridate::month(Sys.Date()), "", endMonth)
+  ) %>% 
+  arrange(desc(startYear))  %>%
+  distinct()  # Add this line
+
+work_manual %>%
+  dplyr::mutate(
+    title = glue::glue("{title}", .na = ""),
+    unit = glue::glue("{unit}", .na = ""),
+    detail = glue::glue("{detail}", .na = ""),
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}", .na = ""),
+    where = glue::glue("{where}", .na = "")
+  ) %>%
   detailed_entries(
     with = title,
     what = unit,
-    #why = detail,
-    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
-    where = where
+    when = glue::glue("{startMonth} {startYear} --> {ifelse(is.na(endMonth) | endMonth == '', '', endMonth)} {endYear}"),
+    where = where,
+    .protect = FALSE
   )
-
 ```
 
 # Actividades de investigación
+
 ## Publicaciones
-\fontsize{9.5pt}{1.2em}\color{text}
+\renewcommand{\arraystretch}{1}\setstretch{1}
 ```{r pubs}
-pubs %>%
+pubs_manual %>%
   detailed_entries(
     #with = area,
     #what = accomplishment,
@@ -70,15 +98,10 @@ pubs %>%
   )
 ```
 
-<br>
+## Seminarios/congresos último año
 
-\vspace{0.4cm}
-
-## Seminarios/congresos
-\fontsize{9.5pt}{1.15em}\color{text}
 ```{r sem}
-#\pagebreak
-sem %>%
+sem_manual %>%
   detailed_entries(
     #with = area,
     #what = accomplishment,
@@ -90,10 +113,12 @@ sem %>%
 
 <br>
 
+\vspace{0.4cm}
+
 # Estudios formales de interés
-\fontsize{9.5pt}{1.15em}\color{text}
+\renewcommand{\arraystretch}{1.5}\setstretch{1.15}
 ```{r EDUCATION}
-edu %>%
+edu_manual %>%
   detailed_entries(
     with = inst,
     what = degree,
@@ -103,6 +128,33 @@ edu %>%
   )
 ```
 
-\pagebreak
+\vspace{0.4cm}
 
-\linebreak
+# Habilidades
+\renewcommand{\arraystretch}{1.5}\setstretch{1.15}
+```{r SKILLS}
+skills_manual %>%
+  detailed_entries(
+    with = area,
+    what = skills
+  )
+```
+
+<br><br>
+
+\vspace{0.5cm}
+\fontsize{8pt}{10pt}\selectfont\bfseries\color{text}
+\subsection{Revisor de artículos en revistas científicas}
+\vspace{-0.3cm}
+\begin{footnotesize}\textcolor{lightgray}{
+American Journal of Preventive Medicine, International Journal of Workplace Health Management, Psicoperspectivas, Revista Universidad y Salud, Quaderns de Psicologia, Medwave, Addiction, Health Policy and Technology.}
+\end{footnotesize}
+
+\vspace{0.3cm}
+\fontsize{8pt}{10pt}\selectfont\bfseries\color{text}
+\subsection{Otras afiliaciones}
+\vspace{-0.3cm}
+\begin{footnotesize}\textcolor{lightgray}{
+Society for Epidemiologic Research: Clearfield, UT, US; 2023- ; Miembro\\
+Grupo de Ciencia de Datos y Salud Pública, Escuela de Salud Pública, Santiago, Chile; Miembro}
+\end{footnotesize}

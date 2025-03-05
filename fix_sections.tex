@@ -1,0 +1,22 @@
+% fix_sections.tex
+\makeatletter
+% Prevents LaTeX from nesting content under section 4
+\renewcommand{\subsection}[1]{%
+  \ifnum\value{section}=4\relax
+    % Only display first 2 subsections in section 4
+    \ifnum\value{subsection}<2\relax
+      \@startsection{subsection}{2}{\z@}%
+      {-3.25ex\@plus -1ex \@minus -.2ex}%
+      {1.5ex \@plus .2ex}%
+      {\normalfont\large\bfseries}%
+      {#1}%
+    \fi
+  \else
+    \@startsection{subsection}{2}{\z@}%
+    {-3.25ex\@plus -1ex \@minus -.2ex}%
+    {1.5ex \@plus .2ex}%
+    {\normalfont\large\bfseries}%
+    {#1}%
+  \fi
+}
+\makeatother
