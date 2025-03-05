@@ -4,18 +4,18 @@ surname: González Santa Cruz
 profilepic: "CURSO-COMPUTACION-ALONSO.jpg"
 position: "Estudiante Doctorado en Salud Pública UCH"
 address: "Santiago de Chile" 
-email: gonzalez.santacruz.andres%40gmail.com #debe estar entre corchetes sino da error
+email: "gonzalez.santacruz.andres{@}gmail.com" #debe estar entre corchetes sino da error
 github: AGSCL #
 linkedin: andr%C3%A9s-gonz%C3%A1lez-santa-cruz #ojo con el formato
 orcid: 0000-0002-5166-9121 
 date: "`r format(Sys.Date(), '%d %B %Y')`"
-docname: CV proveniente de \url{https://github.com/AGSCL/CVshort}
+docname: CV proveniente de \url{https://github.com/AGSCL/CV}
 headcolor: 2f40d8
 linkcolor: magenta #aboutme: "He trabajado como asistente de investigación aplicando técnicas de análisis de datos. Mis áreas de interés son el estudio de políticas públicas sobre tratamiento de drogas, factores de riesgo psicosociales y metodologías de investigación cuantitativas. Este currículo fue compilado en código."
 lang: es
 output: 
   vitae::awesomecv:
-    keep_tex: true
+    keep_tex: false
     pandoc_args: ["--lua-filter=lua/strong.lua"] 
     latex_engine: xelatex
     page_total: true
