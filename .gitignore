@@ -1,0 +1,13 @@
+# Ignorar todo
+*
+
+# No ignorar el archivo asdads.html
+!CURSO-COMUTACION-ALONSO.jpg
+!CVshort.pdf
+!CVshort.pdf
+!awesome-cv.cls
+!cv_data.R
+!fix_sections.tex
+!fix_template.tex
+!preamble.tex
+!.gitignore
