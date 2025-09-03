@@ -3,7 +3,7 @@
 
 # No ignorar el archivo asdads.html
 !CURSO-COMUTACION-ALONSO.jpg
-!CVshort.pdf
+!CVshort.Rmd
 !CVshort.pdf
 !awesome-cv.cls
 !cv_data.R
@@ -12,3 +12,4 @@
 !preamble.tex
 !.gitignore
 .Rproj.user
+!CV_onepage.pdf
